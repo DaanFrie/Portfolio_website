@@ -314,7 +314,7 @@ document.querySelector("#app").innerHTML = `
       <div class="project-card fade-in">
         <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
           <img
-            src="images/OpenHiring2portfolio.jpg"
+            src="images/ChatbotPortfolio1.png"
             alt="Laravel Vacancy Website"
             class="  hover-blur-sm w-full h-auto transition-transform duration-500 group-hover:scale-110 filter  "
           />
