@@ -148,7 +148,7 @@ document.querySelector("#app").innerHTML = `
     <div class="flex flex-col items-center md:items-start ">
 <div class="relative w-[18vw] h-[18vw] mb-[3vh] rounded-2xl overflow-hidden group shadow-xl border-[#b4a978]">
   <img
-    src="public/images/me.jpg"
+    src="./public/images/me.jpg"
     alt="Daan Friederich"
     class="object-cover w-full h-full rounded-2xl transition duration-500 group-hover:scale-105 group-hover:blur-sm"
   />
