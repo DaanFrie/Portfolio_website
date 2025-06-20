@@ -44,12 +44,12 @@
 
 <body>
 <div id="app">
-  <div class="min-h-screen bg-black bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1024px-World_map_-_low_resolution.svg.png')] bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">
+  <div class="min-h-screen bg-black  bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">
 
 
     <!-- Navbar -->
-    <nav class="w-full bg-black/75 backdrop-blur-sm fixed top-0 z-50  ">
-      <div class="w-[95vw] mx-auto px-[2vw] py-[1.5vw] flex justify-between items-center">
+    <nav class="w-full bg-black/75  backdrop-blur-sm fixed top-0 z-50  ">
+      <div class="w-[95vw] mx-auto px-[2vw] md:py-[1.5vw] py-[2vw] flex justify-between items-center">
 
         <!-- Hamburger menu button -->
         <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw] z-[999]">
@@ -93,7 +93,7 @@
       </div>
 
       <!-- Overlay -->
-      <div id="nav-overlay" class="fixed inset-0 bg-black/100  pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
+      <div id="nav-overlay" class="fixed inset-0 bg-black/50  pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
     </nav>
 
 
@@ -129,7 +129,7 @@
             </svg>
           </button>
 
-          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-[1vh] bg-transparent border-2 border-accentGold-500 text-accentGold-500 font-semibold text-[3vw] transition-all duration-200 ease-in-out hover:bg-accentGold-500 hover:text-black md:px-[3.5vw] md:py-[1.5vh] md:text-[0.9vw]">
+          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-[1vh] bg-transparent border-2 border-accentGold-500 text-accentGold-500 font-semibold text-[3vw] transition-all duration-200 ease-in-out md:hover:bg-accentGold-500 md:hover:text-black md:px-[3.5vw] md:py-[1.5vh] md:text-[0.9vw]">
               <span class="transition-opacity duration-300 ease-in-out md:group-hover:opacity-0">
                 View My Work
               </span>
@@ -597,116 +597,156 @@
       </div>
     </section>
 
-    <div class="text-center mt-[2vw]">
-      <a
-              href="#"
-              class="relative group inline-flex items-center justify-center gap-[0.5vw]
-           px-[1.2vw] py-[0.8vw] bg-gradient-to-r from-accentGold-500  to-[#a39666]
-           text-black rounded-[0.8vw] text-[0.9vw] font-medium
-           transition-all duration-300 ease-in-out
-           md:hover:bg-black md:hover:from-black md:hover:to-black border-2 border-accentGold-500"
-      >
-        <!-- GitHub icoon + tekst die verdwijnen bij hover -->
-        <span class="flex items-center gap-[0.5vw] transition-opacity duration-300 ease-in-out md:group-hover:opacity-0">
-      <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-[1.7vw] h-[1.7vw]"
-      >
-        <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 5.302
-          3.438 9.8 8.205 11.387.6.113.82-.26.82-.577
-          0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
-          1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932
-          0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404
-          11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912
-          1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222
-          0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12
-          24 5.373 18.627 0 12 0z"
-        />
-      </svg>
-      View all projects on my GitHub
-    </span>
-
-        <!-- Oog icoon: zichtbaar bij hover -->
-        <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                fill="currentColor"
-                class="absolute w-[2.5vw] h-[2.5vw] text-accentGold-500
-             opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+    <div>
+      <!-- “View all projects” Button -->
+      <div class="text-center mt-[5vw] md:mt-[2vw]">
+        <a
+                href="#"
+                class="relative group inline-flex items-center justify-center gap-[3.6vw]
+             px-[7.2vw] py-[3.15vw] bg-gradient-to-r from-accentGold-500 to-[#a39666]
+             text-black rounded-[2.7vw] text-[3.6vw] font-medium
+             transition-all duration-300 ease-in-out
+             md:gap-[0.5vw] md:px-[1.08vw] md:py-[0.72vw] md:rounded-[0.72vw] md:text-[0.81vw]
+             md:hover:bg-black md:hover:from-black md:hover:to-black border-2 border-accentGold-500"
         >
-          <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+          <!-- GitHub icoon + tekst -->
+          <span class="flex items-center gap-[3.6vw] transition-opacity duration-300 ease-in-out md:gap-[0.45vw] md:group-hover:opacity-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+             class="w-[5.4vw] h-[5.4vw] md:w-[1.53vw] md:h-[1.53vw]">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302
+                   3.438 9.8 8.205 11.387.6.113.82-.26.82-.577
+                   0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61
+                   -.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
+                   1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997
+                   .108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932
+                   0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176
+                   0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404
+                   11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23
+                   .645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222
+                   0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222
+                   0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573
+                   C20.565 21.795 24 17.298 24 12
+                   24 5.373 18.627 0 12 0z"/>
         </svg>
-      </a>
-    </div>
-
-
-  </div>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-[15vh] px-[3.25vw] bg-black">
-    <div class="w-[55vw] mx-auto">
-      <div class="text-center mb-[8vh] fade-in">
-        <h2 class="text-[2.6vw] font-bold text-accentGold-500 mb-[2.1vh] leading-tight">Contact me</h2>
-        <p class="text-[1vw] text-gray-300 max-w-[39vw] mx-auto mb-[5.5vh] leading-snug">
-          You can reach me here:
-        </p>
+        View all projects on my GitHub
+      </span>
+          <!-- Oog icoon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+               class="absolute w-[7.2vw] h-[7.2vw] text-accentGold-500 opacity-0 transition-opacity duration-300 ease-in-out
+                  md:w-[2.25vw] md:h-[2.25vw] md:group-hover:opacity-100">
+            <path d="M0 226v32c128 192 384 192 512 0v-32
+                 C384 34 128 34 0 226zm256 144
+                 c-70.7 0-128-57.3-128-128s57.3-128
+                 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200
+                 c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4
+                 c-53 0-96 43-96 96s43 96 96 96s96-43 96-96
+                 c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3
+                 c-39.8 0-72-32.2-72-72z"/>
+          </svg>
+        </a>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-[3.25vw] text-center slide-in-left">
-        <!-- Email -->
-        <div>
-          <div class="w-[3.5vw] h-[3.5vw] mx-auto mb-[1.5vh] bg-gradient-to-r from-accentGold-500 to-[#a39666] rounded-[0.7vw] flex items-center justify-center">
-            <svg class="w-[1.9vw] h-[1.9vw] text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
+      <!-- Contact Section -->
+      <section id="contact" class="py-[13.5vw] px-[5.4vw] bg-black md:py-[15vh] md:px-[3.25vw]">
+        <div class="max-w-[81vw] mx-auto md:max-w-[55vw]">
+          <div class="text-center mb-[9vw] md:mb-[8vh] fade-in">
+            <h2 class="text-[7.2vw] font-bold text-accentGold-500 mb-[3.6vw] md:text-[2.6vw] md:mb-[2.1vh] leading-tight">
+              Contact me
+            </h2>
+            <p class="text-[3.6vw] text-gray-300 max-w-[72vw] mx-auto mb-[5.4vw] md:text-[1vw] md:max-w-[39vw] md:mb-[5.5vh] leading-snug">
+              You can reach me here:
+            </p>
           </div>
-          <h3 class="text-[0.9vw] font-semibold text-white mb-[0.9vh]">Email</h3>
-          <p class="text-[0.8vw] text-gray-400">daan.developer@email.com</p>
-        </div>
 
-        <!-- LinkedIn -->
-        <div>
-          <div class="w-[3.5vw] h-[3.5vw] mx-auto mb-[1.5vh] bg-gradient-to-r from-accentGold-500  to-[#a39666] rounded-[0.7vw] flex items-center justify-center">
-            <svg class="w-[2vw] h-[2vw] text-black" fill="currentColor" viewBox="-3 0 25 25">
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24H.5V8zM7.5 8h3.78v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.09V24H16.3v-8.2c0-1.96-.04-4.48-2.73-4.48-2.73 0-3.15 2.13-3.15 4.34V24H7.5V8z"/>
-            </svg>
-          </div>
-          <h3 class="text-[0.9vw] font-semibold text-white mb-[0.9vh]">LinkedIn</h3>
-          <p class="text-[0.8vw] text-gray-400">
-            <a href="https://linkedin.com/in/daan-developer" target="_blank" class="hover:text-accentGold-500  transition">
-              linkedin.com/in/daan-developer
-            </a>
-          </p>
-        </div>
+          <div class="grid gap-[7.2vw] text-center md:grid-cols-3 md:gap-[3.25vw] slide-in-left">
+            <!-- Email -->
+            <div>
+              <div class="w-[18vw] h-[18vw] mx-auto mb-[3.6vw]
+                      bg-gradient-to-r from-accentGold-500 to-[#a39666]
+                      rounded-[4.5vw] flex items-center justify-center
+                      md:w-[3.5vw] md:h-[3.5vw] md:mb-[1.5vh] md:rounded-[0.7vw]">
+                <svg class="w-[10.8vw] h-[10.8vw] text-black md:w-[1.9vw] md:h-[1.9vw]"
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8
+                       M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5
+                       a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-[3.6vw] font-semibold text-white mb-[2.7vw] md:text-[0.9vw] md:mb-[0.9vh]">
+                Email
+              </h3>
+              <p class="text-[3.15vw] text-gray-400 md:text-[0.8vw]">
+                daan.developer@email.com
+              </p>
+            </div>
 
-        <!-- Location -->
-        <div>
-          <div class="w-[3.5vw] h-[3.5vw] mx-auto mb-[1.5vh] bg-gradient-to-r from-accentGold-500  to-[#a39666] rounded-[0.7vw] flex items-center justify-center">
-            <svg class="w-[2vw] h-[2vw] text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
+            <!-- LinkedIn -->
+            <div>
+              <div class="w-[18vw] h-[18vw] mx-auto mb-[3.6vw]
+                      bg-gradient-to-r from-accentGold-500 to-[#a39666]
+                      rounded-[4.5vw] flex items-center justify-center
+                      md:w-[3.5vw] md:h-[3.5vw] md:mb-[1.5vh]">
+                <svg class="w-[10.8vw] h-[10.8vw] text-black md:w-[2vw] md:h-[2vw]" fill="currentColor" viewBox="-3 0 25 25">
+                  <path d="M4.98 3.5C4.98 4.88 3.88 6
+                       2.5 6S0 4.88 0 3.5 1.12 1
+                       2.5 1 4.98 2.12 4.98 3.5z
+                       M.5 8h4V24H.5V8z
+                       M7.5 8h3.78v2.2h.05
+                       c.53-1 1.83-2.2 3.77-2.2
+                       4.03 0 4.78 2.65 4.78 6.09V24
+                       H16.3v-8.2c0-1.96-.04-4.48-2.73-4.48
+                       -2.73 0-3.15 2.13-3.15 4.34V24H7.5V8z"/>
+                </svg>
+              </div>
+              <h3 class="text-[3.6vw] font-semibold text-white mb-[2.7vw] md:text-[0.9vw] md:mb-[0.9vh]">
+                LinkedIn
+              </h3>
+              <p class="text-[3.15vw] text-gray-400 md:text-[0.8vw]">
+                <a href="https://linkedin.com/in/daan-developer" target="_blank"
+                   class="hover:text-accentGold-500 transition">
+                  linkedin.com/in/daan-developer
+                </a>
+              </p>
+            </div>
+
+            <!-- Location -->
+            <div>
+              <div class="w-[18vw] h-[18vw] mx-auto mb-[3.6vw]
+                      bg-gradient-to-r from-accentGold-500 to-[#a39666]
+                      rounded-[4.5vw] flex items-center justify-center
+                      md:w-[3.5vw] md:h-[3.5vw] md:mb-[1.5vh]">
+                <svg class="w-[10.8vw] h-[10.8vw] text-black md:w-[2vw] md:h-[2vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9
+                       a1.998 1.998 0 01-2.827 0l-4.244-4.243
+                       a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 class="text-[3.6vw] font-semibold text-white mb-[2.7vw] md:text-[0.9vw] md:mb-[0.9vh]">
+                Location
+              </h3>
+              <p class="text-[3.15vw] text-gray-400 md:text-[0.8vw]">
+                Amsterdam, Nederland
+              </p>
+            </div>
           </div>
-          <h3 class="text-[0.9vw] font-semibold text-white mb-[0.9vh]">Location</h3>
-          <p class="text-[0.8vw] text-gray-400">Amsterdam, Nederland</p>
         </div>
-      </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-[9vw] px-[5.4vw] border-t border-accentGold-700 bg-black md:py-8 md:px-8">
+        <div class="text-center text-gray-400 text-[3.15vw] md:text-[0.9vw]">
+          &copy; 2025 Daan Friederich, All rights reserved.
+        </div>
+      </footer>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="py-8 px-8 border-t border-gray-800 bg-black">
-    <div class="w-3/4 mx-auto text-center text-gray-400">
-      <p>&copy; 2025 Daan's Portfolio. All rights reserved.</p>
-    </div>
-  </footer>
-</div>
-</div>
 
-<div id="custom-scrollbar">
+
+    <div id="custom-scrollbar">
   <div id="scroll-indicator"></div>
 </div>
 
