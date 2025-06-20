@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Reusable primary button */
+.btn-primary {
+    @apply border-2 border-[#b4a978] text-[#b4a978]
+    hover:bg-[#b4a978]/10 transition-all
+    rounded-lg font-semibold px-8 py-3 inline-block;
+}
+
+@layer utilities {
+    .text-dynamic-lg {
+        font-size: clamp(2rem, 8vw, 5rem);
+    }
+    .text-dynamic-md {
+        font-size: clamp(1rem, 4vw, 2rem);
+    }
+    .text-dynamic-sm {
+        font-size: clamp(0.8rem, 3vw, 1.5rem);
+    }
+}
+
+* {
+    font-family: "Domine", serif;
+}
+
+.mono {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+/* Project cards lift */
+.project-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Fade & slide animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+}
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Hover lift for cards */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(180, 169, 120, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(180, 169, 120, 0.5);
+    }
+}
+.pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Gradient shift */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+}
+
+/* Glass effect */
+.glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Typewriter */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end);
+}
+
+/* Stagger */
