@@ -401,7 +401,7 @@ document.querySelector("#app").innerHTML = `
       <div class="project-card fade-in">
         <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
           <img
-            src="ChatbotPortfolio1.png"
+            src="images/ChatbotPortfolio1.png"
             alt="AI Chatbot"
             class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110"
           />
