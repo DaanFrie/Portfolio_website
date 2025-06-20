@@ -96,8 +96,9 @@
 
 
     <!-- Hero Section -->
-    <section id="hero" class="h-[calc(120vh)] flex items-center px-[4vw] bg-black fade-in md:h-[calc(100vh-6vh)] md:px-[5vw]">
-      <div class="w-full max-w-[90vw] mx-auto text-center md:max-w-[80vw]">
+    <section id="hero" class="min-h-screen flex items-center justify-center px-[4vw] bg-black fade-in md:min-h-[calc(100vh-6vh)] md:px-[5vw]">
+
+    <div class="w-full max-w-[80vw] mx-auto text-center md:max-w-[80vw]">
         <!-- Titel -->
         <h1 class="text-[6vw] font-bold mb-[6vw] text-accentGold-500 md:text-[4vw] md:mb-[3vh]">
           Web‑ and Game Developer
@@ -109,7 +110,7 @@
         </p>
 
         <!-- Tags -->
-        <div class="flex flex-wrap justify-center items-center gap-[4vw] mb-[9vw] text-gray-400 text-[3.5vw] md:gap-[2vw] md:mb-[5vh] md:text-[1vw]">
+        <div class="flex flex-wrap justify-center items-center gap-[4vw] mb-[9vw] text-gray-400 text-[3vw] md:gap-[2vw] md:mb-[5vh] md:text-[1vw]">
           <span>Unreal Engine 5 Wizard</span>
           <span>Frontend Design Genius</span>
           <span>Red Wine Connoisseur</span>
@@ -146,44 +147,9 @@
     <!-- About Section -->
     <section id="about" class="py-[8vh] px-[5vw] bg-black text-gray-100 slide-in-left md:py-[12vh] md:px-[5vw]">
       <div class="max-w-[90vw] mx-auto grid grid-cols-1 gap-[5vw] items-center md:max-w-[70vw] md:grid-cols-2 md:gap-[3vw]">
-        <!-- Foto + studie/locatie/email -->
-        <div class="flex flex-col items-center text-center md:items-start md:text-left">
-          <div class="relative w-[50vw] h-[50vw] mb-[4vh] rounded-[1.5vw] overflow-hidden group shadow-xl border-accentGold-500 md:w-[18vw] md:h-[18vw] md:mb-[3vh]">
-            <img src="images/me.jpg" alt="Daan Friederich" class="object-cover w-full h-full rounded-2xl transition duration-500 group-hover:scale-105 group-hover:blur-sm" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <!-- LinkedIn SVG icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#b4a978" class="w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw]">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.721-1.107 2.118-1.5 3.5-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
-              </svg>
-            </div>
-          </div>
-
-          <ul class="space-y-[3vw] text-gray-300 text-[3vw] md:space-y-[2vh] md:text-[0.8vw]">
-            <li class="flex items-center justify-center md:justify-start">
-              <svg class="w-[5vw] h-[5vw] mr-[3vw] md:w-[1vw] md:h-[1vw] md:mr-[0.7vw] text-accentGold-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                <path d="M12 14l6.16-3.422A12.083 12.083 0 0118 13c0 2.21-3.582 4-8 4s-8-1.79-8-4a12.083 12.083 0 01-.16-2.422L12 14z"></path>
-              </svg>
-              Creative Media &amp; Game Technologies, Hogeschool Rotterdam
-            </li>
-            <li class="flex items-center justify-center md:justify-start">
-              <svg class="w-[5vw] h-[5vw] mr-[3vw] md:w-[1vw] md:h-[1vw] md:mr-[0.7vw] text-accentGold-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 20l-4.95-6.05a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-              </svg>
-              Berkel en Rodenrijs, The Netherlands
-            </li>
-            <li class="flex items-center justify-center md:justify-start">
-              <svg class="w-[5vw] h-[5vw] mr-[3vw] md:w-[1vw] md:h-[1vw] md:mr-[0.7vw] text-accentGold-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-              </svg>
-              Daanfrie@gmail.com
-            </li>
-          </ul>
-        </div>
 
         <!-- About Me Text -->
-        <div class="space-y-[4vw] leading-relaxed text-[3vw] px-[2vw] md:space-y-[3vh] md:text-[1vw] md:px-0">
+        <div class="order-1 md:order-2 space-y-[4vw] leading-relaxed text-[3vw] px-[5vw] md:space-y-[3vh] md:text-[1vw] md:px-0">
           <h2 class="font-bold text-accentGold-500 text-[8vw] text-center md:text-[2.5vw] md:text-left">
             About Me
           </h2>
@@ -200,8 +166,51 @@
             Outside of web development, I work with Unreal Engine 5 to create interactive projects that challenge both my technical and creative thinking. I take pride in delivering polished results and constantly look for ways to improve and grow as a developer.
           </p>
         </div>
+
+        <!-- Foto + studie/locatie/email -->
+        <div class="order-2 md:order-1 flex flex-col items-center text-center md:items-start md:text-left">
+          <div class="relative w-[40vw] h-[40vw] mb-[4vh] mt-[5vw] md:mt-0 rounded-[2vw] overflow-hidden group shadow-xl border-accentGold-500 md:w-[18vw] md:h-[18vw] md:mb-[5vh]">
+            <img src="images/me.jpg" alt="Daan Friederich" class="object-cover w-full h-full rounded-2xl transition duration-500 group-hover:scale-105 group-hover:blur-sm" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#b4a978" class="w-[8vw] h-[8vw] md:w-[3.5vw] md:h-[3.5vw]">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.721-1.107 2.118-1.5 3.5-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
+              </svg>
+            </div>
+          </div>
+
+          <ul class="space-y-[2vh] text-gray-300 text-[2.8vw] w-[80vw] md:space-y-[2vh] md:text-[0.8vw]">
+            <!-- Opleiding -->
+            <li class="flex items-center justify-center gap-[2vw] md:justify-start">
+              <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                <path d="M12 14l6.16-3.422A12.083 12.083 0 0118 13c0 2.21-3.582 4-8 4s-8-1.79-8-4a12.083 12.083 0 01-.16-2.422L12 14z"></path>
+              </svg>
+              <span class="block md:hidden">CMGT student @ Hogeschool Rotterdam</span>
+              <span class="hidden md:block">Creative Media &amp; Game Technologies, Hogeschool Rotterdam</span>
+            </li>
+            <!-- Locatie -->
+            <li class="flex items-center justify-center gap-[2vw] md:justify-start">
+              <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 20l-4.95-6.05a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span class="block md:hidden">Berkel en Rodenrijs (NL)</span>
+              <span class="hidden md:block">Berkel en Rodenrijs, The Netherlands</span>
+            </li>
+            <!-- Email -->
+            <li class="flex items-center justify-center gap-[2vw] md:justify-start">
+              <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+              <span class="block md:hidden">daanfrie@gmail.com</span>
+              <span class="hidden md:block">daanfrie@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-[10vh] px-[5vw] bg-black text-white">
