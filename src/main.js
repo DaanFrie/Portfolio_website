@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+
     overlay.addEventListener('click', closeMenu);
 
     document.querySelectorAll('.nav-link').forEach(link => {

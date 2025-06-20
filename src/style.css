@@ -26,9 +26,13 @@
     }
 }
 
+
 html, body {
     overflow-x: hidden;
+
 }
+
+
 /* Verberg standaard scrollbar */
 html, body {
     scrollbar-width: none;      /* Firefox */
@@ -194,7 +198,7 @@ body::-webkit-scrollbar {
 
 /* Actieve hamburger → perfect kruis én goud */
 .hamburger-active .line1 {
-    transform: rotate(45deg) translate(1vw, 1.55vw);
+    transform: rotate(45deg) translate(1vw, 1.35vw);
     background-color:#b4a978;
 }
 .hamburger-active .line2 {
@@ -202,7 +206,7 @@ body::-webkit-scrollbar {
     background-color: #b4a978;
 }
 .hamburger-active .line3 {
-    transform: rotate(-45deg) translate(1vw, -1.55vw);
+    transform: rotate(-45deg) translate(1vw, -1.35vw);
     background-color: #b4a978;
 }
 

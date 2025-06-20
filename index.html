@@ -48,20 +48,22 @@
 
 
     <!-- Navbar -->
-    <nav class="w-full bg-black/75 backdrop-blur-sm sticky top-0 z-50">
+    <nav class="w-full bg-black/75 backdrop-blur-sm fixed top-0 z-50  ">
       <div class="w-[95vw] mx-auto px-[2vw] py-[1.5vw] flex justify-between items-center">
 
         <!-- Hamburger menu button -->
         <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw] z-[999]">
           <div class="relative w-[6vw] h-[4vw]">
-            <span class="absolute top-0 left-0 w-full h-[0.4vw] bg-white line1"></span>
-            <span class="absolute top-1/2 left-0 w-full h-[0.7vw] bg-white -translate-y-1/2 line2"></span>
-            <span class="absolute bottom-0 left-0 w-full h-[0.4vw] bg-white line3"></span>
+            <span class="absolute top-0 left-0 w-full h-[0.5vw] bg-white line1"></span>
+            <span class="absolute top-1/2 left-0 w-full h-[0.4vw] bg-white -translate-y-1/2 scale-y-95 line2"></span>
+
+            <span class="absolute bottom-0 left-0 w-full h-[0.5vw] bg-white line3"></span>
           </div>
         </button>
 
+
         <!-- Site naam -->
-        <div class="order-2 md:order-1 text-[5vw] md:text-[1.2vw] font-bold text-accentGold-500">
+        <div class="order-2 md:order-1 text-[5vw] md:text-[1.2vw] font-bold text-accentGold-500 invisible md:visible">
           Daan Friederich
         </div>
 
@@ -82,7 +84,7 @@
 
         <!-- Menu items gecentreerd -->
         <nav class="flex flex-col items-center gap-[8vw]">
-          <a href="#hero" class="text-white text-[7vw] font-semibold tracking-wide hover:text-accentGold-500 transition duration-200 hover:scale-105 nav-link">Home</a>
+          <a href="#hero" class="text-accentGold-500 text-[7vw] font-semibold tracking-wide hover:text-accentGold-500 transition duration-200 hover:scale-105 nav-link">Home</a>
           <a href="#about" class="text-white text-[7vw] font-semibold tracking-wide hover:text-accentGold-500 transition duration-200 hover:scale-105 nav-link">About</a>
           <a href="#skills" class="text-white text-[7vw] font-semibold tracking-wide hover:text-accentGold-500 transition duration-200 hover:scale-105 nav-link">Skills</a>
           <a href="#projects" class="text-white text-[7vw] font-semibold tracking-wide hover:text-accentGold-500 transition duration-200 hover:scale-105 nav-link">Projects</a>
@@ -211,6 +213,8 @@
       </div>
     </section>
 
+
+
     <!-- Skills Section -->
     <section id="skills" class="py-[10vh] px-[5vw] bg-black text-white md:py-[10vh] md:px-[5vw]">
       <div class="w-full mx-auto text-center">
@@ -305,46 +309,55 @@
           My Projects
         </h2>
 
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-[4vw]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-[4vw]">
 
           <!-- Project 1 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
-              <img src="images/OpenHiring2portfolio.jpg" alt="Laravel Vacancy Website" class="hover-blur-sm w-full h-auto transition-transform duration-500 group-hover:scale-110 filter" />
+            <div class="relative overflow-hidden rounded-[2vw] mb-[4vw] group md:rounded-[1.5vh] md:mb-[1.2vw]">
+              <img src="images/OpenHiring2portfolio.jpg" alt="Laravel Vacancy Website"
+                   class="w-full h-auto transition-transform duration-500 group-hover:scale-110 filter" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                     class="w-[7vw] h-[7vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
                   <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                 </svg>
               </div>
             </div>
+
             <div>
-              <h3 class="text-[1.2vw] font-bold text-accentGold-500  mb-[0.8vw]">
+              <h3 class="text-[4.2vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
                 Laravel Vacancy Website
               </h3>
-              <p class="text-gray-400 mb-[1vw] text-[0.75vw] leading-relaxed">
-                Complete laravel platform for managing job vacancies anonymously including admin dashboard and user profiles.
+              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                Complete Laravel platform for managing job vacancies anonymously including admin dashboard and user profiles.
               </p>
-              <div class="flex flex-wrap gap-[0.5vw] mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-[0.8vw] py-[0.2vw] font-medium text-[0.75vw]">Laravel</span>
-                <span class="text-white border border-white rounded-full px-[0.8vw] py-[0.2vw] font-medium text-[0.75vw]">PHP</span>
-                <span class="text-white border border-white rounded-full px-[0.8vw] py-[0.2vw] font-medium text-[0.75vw]">MySQL</span>
+
+              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Laravel</span>
+                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">PHP</span>
+                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">MySQL</span>
               </div>
 
-              <div class="flex gap-[0.6vw]">
-                <a href="#" class="relative group overflow-hidden flex items-center justify-center gap-[0.5vw] px-[0.7vw] py-[0.6vw] bg-gradient-to-r from-accentGold-500  to-[#a39666] text-black rounded-[0.7vw] text-[0.7vw] font-medium transition-all duration-300 ease-in-out hover:bg-black hover:from-black hover:to-black border-2 border-accentGold-500 ">
-              <span class="flex items-center gap-[0.5vw] transition-opacity duration-300 ease-in-out group-hover:opacity-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-[1vw] h-[1vw]">
-                  <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
-                </svg>
-                View on GitHub
-              </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="absolute inset-0 m-auto w-[1.6vw] h-[1.6vw] text-accentGold-500  opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              <div class="flex gap-3 md:gap-[0.6vw]">
+                <a href="#"
+                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out hover:bg-black hover:from-black hover:to-black border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+        <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out group-hover:opacity-0 md:gap-[0.5vw]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+               class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
+          </svg>
+          View on GitHub
+        </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
                     <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                   </svg>
                 </a>
               </div>
             </div>
           </div>
+
+
 
           <!-- Project 2 -->
           <div class="project-card fade-in">
