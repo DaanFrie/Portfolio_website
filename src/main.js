@@ -25,6 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    const indicator = document.getElementById('scroll-indicator');
+    indicator.style.height = scrollPercent + 'vh'; // groeid in viewport height
+});
+
+
 
 document.querySelector("#app").innerHTML = `
   <div class="min-h-screen bg-black bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1024px-World_map_-_low_resolution.svg.png')] bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">

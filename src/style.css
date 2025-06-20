@@ -26,6 +26,40 @@
     }
 }
 
+
+/* Verberg standaard scrollbar */
+html, body {
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE en Edge */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari, Opera */
+}
+
+/* Custom scrollbar container */
+#custom-scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0.5vw;              /* scrollbar breedte */
+    height: 100vh;
+    background-color: #000000; /* zwart */
+
+    z-index: 9999;
+}
+
+/* Scroll indicator (de “vulling”) */
+#scroll-indicator {
+    width: 100%;
+    height: 0;
+    background-color: #b4a978; /* goud */
+    border-radius: 0.1vw;
+    transition: height 0.2s ease-out;
+}
+
+
+
 * {
     font-family: "Domine", serif;
 }
