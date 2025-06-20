@@ -5,17 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Daan's Portfolio - Web Developer</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            domine: ['Domine', 'serif'],
+          },
+          colors: {
+            accentGold: {
+              50: '#faf9f7',
+              100: '#f5f2ed',
+              200: '#e8e1d4',
+              300: '#dbc9b1',
+              400: '#c9ad87',
+              500: '#b4a978',
+              600: '#a39666',
+              700: '#8a7d56',
+              800: '#71674a',
+              900: '#5c543d',
+            },
+          },
+        },
+      },
+    };
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet" />
 
-  <!-- Your CSS -->
+  <!-- Eigen CSS (geen Tailwind-hulpmiddelen hierbinnen!) -->
   <link rel="stylesheet" href="src/style.css" />
 </head>
+
 <body>
 <div id="app">
   <div class="min-h-screen bg-black bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1024px-World_map_-_low_resolution.svg.png')] bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">
