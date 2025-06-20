@@ -165,8 +165,8 @@ body::-webkit-scrollbar {
 
 /* Glass effect */
 .glass-effect {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 }
 
 /* Typewriter */
@@ -184,4 +184,22 @@ body::-webkit-scrollbar {
     animation: typewriter 3s steps(40, end);
 }
 
-/* Stagger */
+.line1, .line2, .line3 {
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+    transform-origin: center;
+    background-color: white; /* komt overeen met Tailwind's bg-white */
+}
+
+/* Actieve hamburger → perfect kruis én goud */
+.hamburger-active .line1 {
+    transform: rotate(45deg) translate(1vw, 1.55vw);
+    background-color:#b4a978;
+}
+.hamburger-active .line2 {
+    opacity: 0;
+    background-color: #b4a978;
+}
+.hamburger-active .line3 {
+    transform: rotate(-45deg) translate(1vw, -1.55vw);
+    background-color: #b4a978;
+}

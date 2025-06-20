@@ -1,16 +1,16 @@
 // Mobile Navigation Logic
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('nav-toggle');
-    const closeButton  = document.getElementById('nav-close');
-    const menu         = document.getElementById('nav-menu');
-    const overlay      = document.getElementById('nav-overlay');
-    const body         = document.body;
+    const menu = document.getElementById('nav-menu');
+    const overlay = document.getElementById('nav-overlay');
+    const body = document.body;
 
     function openMenu() {
         menu.classList.remove('-translate-x-full');
         overlay.classList.remove('opacity-0', 'pointer-events-none');
         overlay.classList.add('opacity-100');
         body.classList.add('overflow-hidden'); // voorkom scrollen
+        toggleButton.classList.add('hamburger-active');
     }
 
     function closeMenu() {
@@ -18,16 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('opacity-100');
         overlay.classList.add('opacity-0', 'pointer-events-none');
         body.classList.remove('overflow-hidden'); // herstel scrollen
+        toggleButton.classList.remove('hamburger-active');
     }
 
-    toggleButton.addEventListener('click', openMenu);
-    closeButton.addEventListener('click', closeMenu);
+    toggleButton.addEventListener('click', () => {
+        const isOpen = !menu.classList.contains('-translate-x-full');
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
     overlay.addEventListener('click', closeMenu);
-});
 
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (!menu.classList.contains('-translate-x-full')) {
+                closeMenu();
+            }
+        });
+    });
 
-// Smooth Scrolling Navigation
-document.addEventListener("DOMContentLoaded", () => {
+    // Smooth Scrolling Navigation
     document.querySelectorAll(".nav-link").forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
@@ -49,20 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right").forEach((el) => {
         observer.observe(el);
     });
-});
 
-// Custom Scroll Indicator
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-
-    const indicator = document.getElementById('scroll-indicator');
-    indicator.style.height = scrollPercent + 'vh';
-});
-
-// Console Log for Development
-document.addEventListener("DOMContentLoaded", () => {
+    // Console Log for Development
     console.log(`
     ⚫✨ Portfolio Loaded Successfully! ⚫✨
     
@@ -75,4 +76,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     📧 Contact: daan.developer@email.com
   `);
+});
+
+// Custom Scroll Indicator
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    const indicator = document.getElementById('scroll-indicator');
+    if (indicator) {
+        indicator.style.height = scrollPercent + 'vh';
+    }
 });

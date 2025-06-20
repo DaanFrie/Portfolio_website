@@ -25,12 +25,12 @@
     <nav class="w-full bg-black/75 backdrop-blur-sm sticky top-0 z-50">
       <div class="w-[95vw] mx-auto px-[2vw] py-[1.5vw] flex justify-between items-center">
 
-        <!-- Hamburger menu: mobile only -->
-        <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw]">
-          <div class="space-y-[0.3vw]">
-            <span class="block w-[6vw] h-[0.4vw] bg-white transition-transform duration-300"></span>
-            <span class="block w-[6vw] h-[0.4vw] bg-white transition-opacity duration-300"></span>
-            <span class="block w-[6vw] h-[0.4vw] bg-white transition-transform duration-300"></span>
+        <!-- Hamburger menu button -->
+        <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw] z-[999]">
+          <div class="relative w-[6vw] h-[4vw]">
+            <span class="absolute top-0 left-0 w-full h-[0.4vw] bg-white line1"></span>
+            <span class="absolute top-1/2 left-0 w-full h-[0.7vw] bg-white -translate-y-1/2 line2"></span>
+            <span class="absolute bottom-0 left-0 w-full h-[0.4vw] bg-white line3"></span>
           </div>
         </button>
 
@@ -50,14 +50,9 @@
       </div>
 
       <!-- Mobile fullscreen menu -->
-      <div id="nav-menu" class="fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/90 flex flex-col justify-center items-center transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+      <div id="nav-menu" class="fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/100 flex flex-col justify-center items-center transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
 
-        <!-- Close button -->
-        <button id="nav-close" class="absolute top-[5vw] left-[5vw] p-[2vw] bg-white/10 hover:bg-white/20 rounded-full transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-[6vw] h-[6vw] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+
 
         <!-- Menu items gecentreerd -->
         <nav class="flex flex-col items-center gap-[8vw]">
@@ -70,7 +65,7 @@
       </div>
 
       <!-- Overlay -->
-      <div id="nav-overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
+      <div id="nav-overlay" class="fixed inset-0 bg-black/100  pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
     </nav>
 
 
@@ -96,7 +91,7 @@
 
         <!-- Buttons -->
         <div class="flex flex-wrap justify-center gap-[4vw] mb-[9vw] md:gap-[2vw] md:mb-[5vh]">
-          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-[0.7vw] bg-accentGold-500 text-black font-semibold text-[3vw] transition-all duration-200 ease-in-out hover:bg-black border-2 border-accentGold-500 md:px-[3vw] md:py-[1.5vh] md:text-[0.9vw]">
+          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-[1vh] bg-accentGold-500 text-black font-semibold text-[3vw] transition-all duration-200 ease-in-out hover:bg-black border-2 border-accentGold-500 md:px-[3vw] md:py-[1.5vh] md:text-[0.9vw]">
               <span class="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
                 Download Resume
               </span>
@@ -105,7 +100,7 @@
             </svg>
           </button>
 
-          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-[0.7vw] bg-transparent border-2 border-accentGold-500 text-accentGold-500 font-semibold text-[3vw] transition-all duration-200 ease-in-out hover:bg-accentGold-500 hover:text-black md:px-[3.5vw] md:py-[1.5vh] md:text-[0.9vw]">
+          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-[1vh] bg-transparent border-2 border-accentGold-500 text-accentGold-500 font-semibold text-[3vw] transition-all duration-200 ease-in-out hover:bg-accentGold-500 hover:text-black md:px-[3.5vw] md:py-[1.5vh] md:text-[0.9vw]">
               <span class="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
                 View My Work
               </span>
@@ -265,7 +260,7 @@
 
           <!-- Project 1 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1vw] mb-[1.2vw] group">
+            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
               <img src="images/OpenHiring2portfolio.jpg" alt="Laravel Vacancy Website" class="hover-blur-sm w-full h-auto transition-transform duration-500 group-hover:scale-110 filter" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -304,7 +299,7 @@
 
           <!-- Project 2 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1vw] mb-[1.2vw] group">
+            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
               <img src="images/ChatbotPortfolio1.png" alt="AI Chatbot" class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -342,7 +337,7 @@
 
           <!-- Project 3 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1vw] mb-[1.2vw] group">
+            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
               <img src="images/ue5fpsparcourgamehome.png" alt="UE5 FPS Parcour Game" class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -380,7 +375,7 @@
 
           <!-- Project 4 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1vw] mb-[1.2vw] group">
+            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
               <img src="images/nowaybackportfoliohome.png" alt="Financial Analytics Platform" class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -418,7 +413,7 @@
 
           <!-- Project 5 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1vw] mb-[1.2vw] group">
+            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
               <img src="images/SouthParkWebsiteportfoliohome.png" alt="Social Media Platform" class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -456,7 +451,7 @@
 
           <!-- Project 6 -->
           <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[1vw] mb-[1.2vw] group">
+            <div class="relative overflow-hidden rounded-[1.5vh] mb-[1.2vw] group">
               <img src="images/geesecandriveportfoliohome.png" alt="Excalibur.js Game" class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110" />
               <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-[2.1vw] h-[2.1vw] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
