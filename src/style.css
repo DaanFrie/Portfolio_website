@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
     position: fixed;
     top: 0;
     right: 0;
-    width: 0.5vw;              /* scrollbar breedte */
+    width: 0.7vh;              /* scrollbar breedte */
     height: 100vh;
     background-color: #000000; /* zwart */
 
