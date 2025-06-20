@@ -26,7 +26,9 @@
     }
 }
 
-
+html, body {
+    overflow-x: hidden;
+}
 /* Verberg standaard scrollbar */
 html, body {
     scrollbar-width: none;      /* Firefox */
@@ -202,4 +204,15 @@ body::-webkit-scrollbar {
 .hamburger-active .line3 {
     transform: rotate(-45deg) translate(1vw, -1.55vw);
     background-color: #b4a978;
+}
+
+
+
+
+/* Mobile width aanpassen */
+@media (max-width: 768px) {
+    #custom-scrollbar {
+        width: 0.1vh; /* smaller op mobiel */
+        margin-right: 0.1vh;
+    }
 }
