@@ -216,7 +216,7 @@ body::-webkit-scrollbar {
 /* Mobile width aanpassen */
 @media (max-width: 768px) {
     #custom-scrollbar {
-        width: 0.2vh; /* smaller op mobiel */
-        margin-right: 0.2vh;
+        width: 0; /* smaller op mobiel */
+
     }
 }
