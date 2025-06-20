@@ -3,11 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts}"],
   theme: {
     extend: {
+
       fontFamily: {
         domine: ['Domine', 'serif'],
       },
       colors: {
-
         accentGold: {
           50: '#faf9f7',
           100: '#f5f2ed',
@@ -21,6 +21,7 @@ export default {
           900: '#5c543d',
         },
       },
+
     },
   },
   plugins: [],
