@@ -148,7 +148,7 @@ document.querySelector("#app").innerHTML = `
     <div class="flex flex-col items-center md:items-start ">
 <div class="relative w-[18vw] h-[18vw] mb-[3vh] rounded-2xl overflow-hidden group shadow-xl border-[#b4a978]">
   <img
-    src="/images/me.jpg"
+    src="images/me.jpg"
     alt="Daan Friederich"
     class="object-cover w-full h-full rounded-2xl transition duration-500 group-hover:scale-105 group-hover:blur-sm"
   />
@@ -314,7 +314,7 @@ document.querySelector("#app").innerHTML = `
       <div class="project-card fade-in">
         <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
           <img
-            src="/images/OpenHiring2portfolio.jpg"
+            src="images/OpenHiring2portfolio.jpg"
             alt="Laravel Vacancy Website"
             class="  hover-blur-sm w-full h-auto transition-transform duration-500 group-hover:scale-110 filter  "
           />
@@ -484,7 +484,7 @@ document.querySelector("#app").innerHTML = `
 <div class="project-card fade-in">
   <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
     <img
-      src="/images/ue5fpsparcourgamehome.png"
+      src="images/ue5fpsparcourgamehome.png"
       alt="UE5 FPS Parcour Game"
       class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110"
     />
@@ -569,7 +569,7 @@ document.querySelector("#app").innerHTML = `
       <div class="project-card fade-in">
         <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
           <img
-            src="/images/nowaybackportfoliohome.png"
+            src="images/nowaybackportfoliohome.png"
             alt="Financial Analytics Platform"
             class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110"
           />
@@ -651,7 +651,7 @@ document.querySelector("#app").innerHTML = `
       <div class="project-card fade-in">
         <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
           <img
-            src="/images/SouthParkWebsiteportfoliohome.png"
+            src="images/SouthParkWebsiteportfoliohome.png"
             alt="Social Media Platform"
             class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110"
           />
@@ -733,7 +733,7 @@ document.querySelector("#app").innerHTML = `
       <div class="project-card fade-in">
         <div class="relative overflow-hidden rounded-2xl mb-[1.2vw] group">
           <img
-            src="/images/geesecandriveportfoliohome.png"
+            src="images/geesecandriveportfoliohome.png"
             alt="AI Chatbot Platform"
             class="object-cover w-full h-auto transition-transform duration-500 group-hover:scale-110"
           />
