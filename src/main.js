@@ -64,84 +64,70 @@ document.querySelector("#app").innerHTML = `
 
       
 <!-- Hero Section -->
-<section id="hero" class="h-[calc(100vh-6vh)] flex items-center px-[5vw] bg-black fade-in">
-  <div class="w-full max-w-[80vw] mx-auto text-center ">
+<section id="hero" class="h-[calc(120vh)] flex items-center px-[4vw] bg-black fade-in md:h-[calc(100vh-6vh)] md:px-[5vw]">
+  <div class="w-full max-w-[90vw] mx-auto text-center md:max-w-[80vw]">
 
-    <!-- Titel (van 6vw naar 5vw) -->
-    <h1 class="text-[4vw] font-bold mb-[3vh] text-[#b4a978] ">
+    <!-- Titel -->
+    <h1 class="text-[6vw] font-bold mb-[6vw] text-[#b4a978] md:text-[4vw] md:mb-[3vh]">
       Web‑ and Game Developer
     </h1>
 
-    <!-- Introductie tekst (van 1.4vw naar 1.2vw) -->
-    <p class="text-[1.1vw] text-gray-300 mb-[4vh] max-w-[40vw] mx-auto leading-relaxed ">
+    <!-- Introductie tekst -->
+    <p class="text-[3.5vw] text-gray-300 mb-[9vw] leading-relaxed md:text-[1.1vw] md:mb-[4vh] md:max-w-[40vw] md:mx-auto">
       I build fast, responsive, and visually compelling web applications using modern technologies like Vite, Tailwind CSS, and Laravel. In my spare time, I create immersive experiences in Unreal Engine 5. I am currently looking for an internship.
     </p>
 
-    <!-- Tags (van 1vw naar 0.9vw) -->
-    <div class="flex justify-center items-center gap-[2vw] mb-[5vh] flex-wrap text-gray-400  text-[1vw]">
+    <!-- Tags -->
+    <div class="flex flex-wrap justify-center items-center gap-[4vw] mb-[9vw] text-gray-400 text-[3.5vw] md:gap-[2vw] md:mb-[5vh] md:text-[1vw]">
       <span>Unreal Engine 5 Wizard</span>
       <span>Frontend Design Genius</span>
       <span>Red Wine Connoisseur</span>
     </div>
 
-    <!-- Buttons (van 1vw naar 0.9vw) -->
-    <div class="flex justify-center gap-[2vw] mb-[5vh]  flex-wrap">
-<button
-  class="relative group overflow-hidden px-[4vw] py-[1.5vh] rounded-lg 
-         bg-[#b4a978]
-         text-black font-semibold text-[0.9vw] 
-         transition-all duration-200 ease-in-out hover:bg-black border-2 border-[#b4a978]"
->
-  <!-- Tekst verdwijnt bij hover -->
-  <span class="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
-    Download Resume
-  </span>
+    <!-- Buttons -->
+    <div class="flex flex-wrap justify-center gap-[4vw] mb-[9vw] md:gap-[2vw] md:mb-[5vh]">
+      <button
+        class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-lg
+               bg-[#b4a978] text-black font-semibold text-[3vw]
+               transition-all duration-200 ease-in-out hover:bg-black border-2 border-[#b4a978]
+               md:px-[4vw] md:py-[1.5vh] md:text-[0.9vw]"
+      >
+        <span class="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
+          Download Resume
+        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="absolute inset-0 m-auto w-[5vw] h-[5vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.75vw] md:h-[1.75vw]"
+        >
+          <!-- … -->
+        </svg>
+      </button>
 
-  <!-- Download icon fade-in -->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    class="absolute inset-0 m-auto w-[1.75vw] h-[1.75vw] text-[#b4a978]
-           opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
-  >
-    <path
-      fill-rule="evenodd"
-      d="M12 3a.75.75 0 01.75.75v9.19l2.72-2.72a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 111.06-1.06l2.72 2.72V3.75A.75.75 0 0112 3zm-6.75 13.5a.75.75 0 000 1.5h13.5a.75.75 0 000-1.5H5.25z"
-      clip-rule="evenodd"
-    />
-  </svg>
-</button>
-
-
-<button
-  class="relative group overflow-hidden px-[4vw] py-[1.5vh] rounded-lg
-         bg-transparent border-2 border-[#b4a978]
-         text-[#b4a978] font-semibold text-[0.9vw]
-         transition-all duration-200 ease-in-out hover:bg-[#b4a978] hover:text-black"
->
-  <!-- Text fades out on hover -->
-  <span class="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
-    View My Work
-  </span>
-
-  <!-- Eye icon fades in on hover -->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512 512"
-    fill="currentColor"
-    class="absolute inset-0 m-auto w-[1.9vw] h-[1.9vw] text-black
-           opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
-  >
-    <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-  </svg>
-</button>
-
-
+      <button
+        class="relative group overflow-hidden px-[5vw] py-[1.5vh] rounded-lg
+               bg-transparent border-2 border-[#b4a978]
+               text-[#b4a978] font-semibold text-[3vw]
+               transition-all duration-200 ease-in-out hover:bg-[#b4a978] hover:text-black
+               md:px-[4vw] md:py-[1.5vh] md:text-[0.9vw]"
+      >
+        <span class="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
+          View My Work
+        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          fill="currentColor"
+          class="absolute inset-0 m-auto w-[5.5vw] h-[5.5vw] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.9vw] md:h-[1.9vw]"
+        >
+          <!-- … -->
+        </svg>
+      </button>
     </div>
 
-    <!-- Social icons (van 1vw naar 0.9vw) -->
-    <div class="flex justify-center gap-[2vw]  text-[0.9vw]">
+    <!-- Social icons -->
+    <div class="flex justify-center gap-[4vw] text-[3.5vw] md:gap-[2vw] md:text-[0.9vw]">
       <!-- Social icons hier -->
     </div>
 
@@ -150,81 +136,83 @@ document.querySelector("#app").innerHTML = `
 
 
 
+
+
+
 <!-- About Section -->
-<section id="about" class="py-[12vh] px-[5vw] bg-black text-gray-100 slide-in-left">
-  <div class="max-w-[70vw] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[3vw] items-center">
+<section id="about" class="py-[8vh] px-[5vw] bg-black text-gray-100 slide-in-left md:py-[12vh] md:px-[5vw]">
+  <div class="max-w-[90vw] mx-auto grid grid-cols-1 gap-[5vw] items-center md:max-w-[70vw] md:grid-cols-2 md:gap-[3vw]">
 
     <!-- Foto + studie/locatie/email -->
-    <div class="flex flex-col items-center md:items-start ">
-<div class="relative w-[18vw] h-[18vw] mb-[3vh] rounded-2xl overflow-hidden group shadow-xl border-[#b4a978]">
-  <img
-    src="images/me.jpg"
-    alt="Daan Friederich"
-    class="object-cover w-full h-full rounded-2xl transition duration-500 group-hover:scale-105 group-hover:blur-sm"
-  />
-  <div
-    class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-  >
-    <!-- LinkedIn SVG icon -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="#b4a978"
-      class="w-[3.5vw] h-[3.5vw]"
-    >
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.721-1.107 2.118-1.5 3.5-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
-    </svg>
-  </div>
-</div>
+    <div class="flex flex-col items-center text-center md:items-start md:text-left">
+      <div class="relative w-[50vw] h-[50vw] mb-[4vh] rounded-2xl overflow-hidden group shadow-xl border-[#b4a978]
+                  md:w-[18vw] md:h-[18vw] md:mb-[3vh]">
+        <img
+          src="images/me.jpg"
+          alt="Daan Friederich"
+          class="object-cover w-full h-full rounded-2xl transition duration-500 group-hover:scale-105 group-hover:blur-sm"
+        />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        >
+          <!-- LinkedIn SVG icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#b4a978"
+            class="w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw]"
+          >
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.721-1.107 2.118-1.5 3.5-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
+          </svg>
+        </div>
+      </div>
 
-
-
-      <ul class="space-y-[2vh] text-gray-300 text-[0.8vw]">
-        <li class="flex items-center">
-          <svg class="w-[1vw] h-[1vw] mr-[0.7vw] text-[#b4a978]" fill="currentColor" viewBox="0 0 20 20">
+      <ul class="space-y-[3vw] text-gray-300 text-[3vw] md:space-y-[2vh] md:text-[0.8vw]">
+        <li class="flex items-center justify-center md:justify-start">
+          <svg class="w-[5vw] h-[5vw] mr-[3vw] md:w-[1vw] md:h-[1vw] md:mr-[0.7vw] text-[#b4a978]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
             <path d="M12 14l6.16-3.422A12.083 12.083 0 0118 13c0 2.21-3.582 4-8 4s-8-1.79-8-4a12.083 12.083 0 01-.16-2.422L12 14z"></path>
           </svg>
-          Creative Media & Game Technologies, Hogeschool Rotterdam
+          Creative Media &amp; Game Technologies, Hogeschool Rotterdam
         </li>
-        <li class="flex items-center">
-          <svg class="w-[1vw] h-[1vw] mr-[0.7vw] text-[#b4a978]" fill="currentColor" viewBox="0 0 20 20">
+        <li class="flex items-center justify-center md:justify-start">
+          <svg class="w-[5vw] h-[5vw] mr-[3vw] md:w-[1vw] md:h-[1vw] md:mr-[0.7vw] text-[#b4a978]" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 20l-4.95-6.05a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
           </svg>
           Berkel en Rodenrijs, The Netherlands
         </li>
-        <li class="flex items-center">
-          <svg class="w-[1vw] h-[1vw] mr-[0.7vw] text-[#b4a978]" fill="currentColor" viewBox="0 0 20 20">
+        <li class="flex items-center justify-center md:justify-start">
+          <svg class="w-[5vw] h-[5vw] mr-[3vw] md:w-[1vw] md:h-[1vw] md:mr-[0.7vw] text-[#b4a978]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
           </svg>
-  Daanfrie@gmail.com
+          Daanfrie@gmail.com
         </li>
       </ul>
     </div>
 
-<!-- About Me Text -->
-<div class="space-y-[3vh] leading-relaxed text-[1vw] md:text-[0.9vw]">
-  <h2 class="font-bold text-[#b4a978] text-[2.5vw] md:text-[2.5vw]">
-    About Me
-  </h2>
+    <!-- About Me Text -->
+    <div class="space-y-[4vw] leading-relaxed text-[3vw] px-[2vw] md:space-y-[3vh] md:text-[1vw] md:px-0">
+      <h2 class="font-bold text-[#b4a978] text-[8vw] text-center md:text-[2.5vw] md:text-left">
+        About Me
+      </h2>
 
-  <p class="text-gray-200">
-    Hi, I’m Daan Friederich, a Creative Media & Game Technologies student based in the Netherlands. I’m passionate about blending design and technology to create experiences that are both visually aesthetic and technically solid. Whether I’m working on a website or a game, I enjoy bringing ideas to life with precision and creativity.
-  </p>
+      <p class="text-gray-200 text-justify">
+        Hi, I’m Daan Friederich, a Creative Media &amp; Game Technologies student based in the Netherlands. I’m passionate about blending design and technology to create experiences that are both visually aesthetic and technically solid. Whether I’m working on a website or a game, I enjoy bringing ideas to life with precision and creativity.
+      </p>
 
-  <p class="text-gray-200">
-    I specialize in front-end web development and love building clean, responsive interfaces using modern tools like Vite and Tailwind CSS. I also have experience with JavaScript, HTML, CSS, PHP, and Laravel. I’m focused on writing code that supports intuitive, user-friendly design and runs flawlessly.
-  </p>
+      <p class="text-gray-200 text-justify">
+        I specialize in front-end web development and love building clean, responsive interfaces using modern tools like Vite and Tailwind CSS. I also have experience with JavaScript, HTML, CSS, PHP, and Laravel. I’m focused on writing code that supports intuitive, user-friendly design and runs flawlessly.
+      </p>
 
-  <p class="text-gray-200">
-    Outside of web development, I work with Unreal Engine 5 to create interactive projects that challenge both my technical and creative thinking. I take pride in delivering polished results and constantly look for ways to improve and grow as a developer.
-  </p>
-</div>
-
+      <p class="text-gray-200 text-justify">
+        Outside of web development, I work with Unreal Engine 5 to create interactive projects that challenge both my technical and creative thinking. I take pride in delivering polished results and constantly look for ways to improve and grow as a developer.
+      </p>
+    </div>
 
   </div>
 </section>
+
 
 
 
