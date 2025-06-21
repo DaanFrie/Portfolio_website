@@ -44,95 +44,95 @@
 </head>
 
 <body>
-<div id="app">
-  <div class="min-h-screen bg-black  bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">
+<!-- Navbar -->
+<nav id="main-navbar" class="w-full bg-black/90  backdrop-blur-sm fixed top-0 left-0 z-50  ">
+  <div class="w-[95vw] mx-auto px-[2vw] md:py-[1vw] py-[2vw] flex justify-between items-center ">
 
+    <!-- Hamburger menu button -->
+    <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw] z-[999]">
+      <div class="relative w-[6vw] h-[4vw]">
+        <span class="absolute top-0 left-0 w-full h-[0.5vw] bg-white line1"></span>
+        <span class="absolute top-1/2 left-0 w-full h-[0.4vw] bg-white -translate-y-1/2 scale-y-95 line2"></span>
 
-    <!-- Navbar -->
-    <nav class="w-full bg-black/90  backdrop-blur-sm fixed top-0 z-50  ">
-      <div class="w-[95vw] mx-auto px-[2vw] md:py-[1vw] py-[2vw] flex justify-between items-center">
-
-        <!-- Hamburger menu button -->
-        <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw] z-[999]">
-          <div class="relative w-[6vw] h-[4vw]">
-            <span class="absolute top-0 left-0 w-full h-[0.5vw] bg-white line1"></span>
-            <span class="absolute top-1/2 left-0 w-full h-[0.4vw] bg-white -translate-y-1/2 scale-y-95 line2"></span>
-
-            <span class="absolute bottom-0 left-0 w-full h-[0.5vw] bg-white line3"></span>
-          </div>
-        </button>
-
-
-        <!-- Site naam -->
-        <div class="order-2 md:order-1 text-[5vw] md:text-[1.2vw] font-bold text-accentGold-500 invisible md:visible">
-          Daan Friederich
-        </div>
-
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center gap-[1.5vw] md:order-2">
-          <a href="#hero" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Home</a>
-          <a href="#about" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">About</a>
-          <a href="#skills" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Skills</a>
-          <a href="#projects" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Projects</a>
-          <a href="#contact" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Contact</a>
-        </div>
+        <span class="absolute bottom-0 left-0 w-full h-[0.5vw] bg-white line3"></span>
       </div>
-
-      <!-- Mobile fullscreen menu -->
-      <div id="nav-menu" class="fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/100 flex flex-col justify-center items-center transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+    </button>
 
 
+    <!-- Site naam -->
+    <div class="order-2 md:order-1 text-[5vw] md:text-[1.2vw] font-bold text-accentGold-500 invisible md:visible">
+      Daan Friederich
+    </div>
 
-        <!-- Menu items gecentreerd -->
-        <nav class="flex flex-col items-center gap-[8vw]">
-          <a href="#hero" class="text-accentGold-500 text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Home</a>
-          <a href="#about" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">About</a>
-          <a href="#skills" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Skills</a>
-          <a href="#projects" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Projects</a>
-          <a href="#contact" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Contact</a>
-        </nav>
-      </div>
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-[1.5vw] md:order-2">
+      <a href="#hero" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Home</a>
+      <a href="#about" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">About</a>
+      <a href="#skills" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Skills</a>
+      <a href="#projects" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Projects</a>
+      <a href="#contact" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Contact</a>
+    </div>
+  </div>
 
-      <!-- Overlay -->
-      <div id="nav-overlay" class="fixed inset-0 bg-black/90  pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
+  <!-- Mobile fullscreen menu -->
+  <div id="nav-menu" class="fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/100 flex flex-col justify-center items-center transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+
+    <!-- Menu items gecentreerd -->
+    <nav class="flex flex-col items-center gap-[8vw]">
+      <a href="#hero" class="text-accentGold-500 text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Home</a>
+      <a href="#about" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">About</a>
+      <a href="#skills" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Skills</a>
+      <a href="#projects" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Projects</a>
+      <a href="#contact" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Contact</a>
     </nav>
+  </div>
+
+  <!-- Overlay -->
+  <div id="nav-overlay" class="fixed inset-0 bg-black/90  pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
+</nav>
+<main>
+  <div id="app">
+    <div class="min-h-screen bg-black  bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">
 
 
-    <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center px-[4vw] bg-black fade-in md:min-h-[calc(100vh-6vh)] md:px-[5vw]">
 
-      <div class="w-full max-w-[90vw] mx-auto text-center md:max-w-[80vw]">
-        <!-- Titel -->
-        <h1 class="text-[6.5vw] font-bold mb-[6vw] text-accentGold-500 md:text-[4vw] md:mb-[3vh]">
-          Web‑ and Game Developer
-        </h1>
 
-        <!-- Introductie tekst -->
-        <p class="text-[4vw] text-gray-300 mb-[9vw] leading-relaxed md:text-[1.1vw] md:mb-[4vh] md:max-w-[40vw] md:mx-auto">
-          I build fast, responsive, and visually compelling web applications using modern technologies like Vite, Tailwind CSS, and Laravel. In my spare time, I create immersive experiences in Unreal Engine 5. I am currently looking for an internship.
-        </p>
 
-        <!-- Tags -->
-        <div class="flex flex-wrap justify-center items-center gap-[4vw] mb-[9vw] text-gray-400 text-[3vw] md:gap-[2vw] md:mb-[5vh] md:text-[1vw]">
-          <span>Unreal Engine 5 Wizard</span>
-          <span>Frontend Design Genius</span>
-          <span>Red Wine Connoisseur</span>
-        </div>
+      <!-- Hero Section -->
+      <section id="hero" class="min-h-screen flex items-center justify-center px-[4vw] bg-black fade-in md:min-h-[calc(100vh-6vh)] md:px-[5vw]">
 
-        <!-- Buttons -->
-        <div class="flex flex-wrap justify-center gap-[4vw] mb-[9vw] md:gap-[2vw] md:mb-[5vh]">
-          <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] md:rounded-[1vw] rounded-[1.5vh] bg-accentGold-500 text-black font-semibold text-[3vw] transition-all duration-200 ease-in-out md:hover:bg-black border-2 border-accentGold-500 md:px-[3vw] md:py-[1.5vh] md:text-[0.9vw]">
+        <div class="w-full max-w-[90vw] mx-auto text-center md:max-w-[80vw]">
+          <!-- Titel -->
+          <h1 class="text-[6.5vw] font-bold mb-[6vw] text-accentGold-500 md:text-[4vw] md:mb-[3vh]">
+            Web‑ and Game Developer
+          </h1>
+
+          <!-- Introductie tekst -->
+          <p class="text-[4vw] text-gray-300 mb-[9vw] leading-relaxed md:text-[1.1vw] md:mb-[4vh] md:max-w-[40vw] md:mx-auto">
+            I build fast, responsive, and visually compelling web applications using modern technologies like Vite, Tailwind CSS, and Laravel. In my spare time, I create immersive experiences in Unreal Engine 5. I am currently looking for an internship.
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap justify-center items-center gap-[4vw] mb-[9vw] text-gray-400 text-[3vw] md:gap-[2vw] md:mb-[5vh] md:text-[1vw]">
+            <span>Unreal Engine 5 Wizard</span>
+            <span>Frontend Design Genius</span>
+            <span>Red Wine Connoisseur</span>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center gap-[4vw] mb-[9vw] md:gap-[2vw] md:mb-[5vh]">
+            <button class="relative group overflow-hidden px-[5vw] py-[1.5vh] md:rounded-[1vw] rounded-[1.5vh] bg-accentGold-500 text-black font-semibold text-[3vw] transition-all duration-200 ease-in-out md:hover:bg-black border-2 border-accentGold-500 md:px-[3vw] md:py-[1.5vh] md:text-[0.9vw]">
               <span class="transition-opacity duration-300 ease-in-out md:group-hover:opacity-0">
                 Download Resume
               </span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute inset-0 m-auto w-[5vw] h-[5vw] opacity-0 md:group-hover:opacity-100 text-accentGold-500 transition-opacity duration-300 ease-in-out md:w-[1.75vw] md:h-[1.75vw]">
-              <path d="M12 2L12 14M7 9L12 14L17 9M5 18H19" stroke="currentColor" stroke-width="2" fill="none"/>
-            </svg>
-          </button>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute inset-0 m-auto w-[5vw] h-[5vw] opacity-0 md:group-hover:opacity-100 text-accentGold-500 transition-opacity duration-300 ease-in-out md:w-[1.75vw] md:h-[1.75vw]">
+                <path d="M12 2L12 14M7 9L12 14L17 9M5 18H19" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </button>
 
-          <a
-                  href="#projects"
-                  class="nav-link relative group overflow-hidden
+            <a
+                    href="#projects"
+                    class="nav-link relative group overflow-hidden
          px-[5vw] py-[1.5vh] rounded-[1.5vh] md:rounded-[1vw]
          bg-transparent border-2 border-accentGold-500
          text-accentGold-500 font-semibold text-[3vw]
@@ -142,230 +142,227 @@
   <span class="transition-opacity duration-300 ease-in-out md:group-hover:opacity-0">
     View My Work
   </span>
-            <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    fill="currentColor"
-                    class="absolute inset-0 m-auto w-[5.5vw] h-[5.5vw] opacity-0
+              <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                      class="absolute inset-0 m-auto w-[5.5vw] h-[5.5vw] opacity-0
            md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out
            md:w-[1.9vw] md:h-[1.9vw]">
-              <path d="M0 226v32c128 192 384 192 512 0v-32C384 34
+                <path d="M0 226v32c128 192 384 192 512 0v-32C384 34
              128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128
              128-128s128 57.3 128 128s-57.3 128-128 128zm0-200
              c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4
              c-53 0-96 43-96 96s43 96 96 96s96-43 96-96
              c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3
              c-39.8 0-72-32.2-72-72z"/>
-            </svg>
-          </a>
-
-        </div>
-
-        <!-- Social icons -->
-        <div class="flex justify-center gap-[4vw] text-[3.5vw] md:gap-[2vw] md:text-[0.9vw]">
-          <!-- Social icons hier -->
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-[0vh] px-[5vw] bg-black text-gray-100 md:py-[12vh] md:px-[5vw]">
-      <div class="max-w-[90vw] mx-auto grid grid-cols-1 gap-[5vw] items-center md:max-w-[70vw] md:grid-cols-2 md:gap-[3vw] fade-in md:slide-in-left">
-
-        <!-- About Me Text -->
-        <div class="order-1 md:order-2 space-y-[4vw] leading-relaxed text-[3.5vw] px-[5vw] md:space-y-[3vh] md:text-[1vw] md:px-0">
-          <h2 class="font-bold text-accentGold-500 text-[9vw] text-center md:text-[2.5vw] md:text-left">
-            About Me
-          </h2>
-
-          <p class="text-gray-200 text-justify">
-            Hi, I'm Daan Friederich, a Creative Media &amp; Game Technologies student based in the Netherlands. I'm passionate about blending design and technology to create experiences that are both visually aesthetic and technically solid. Whether I'm working on a website or a game, I enjoy bringing ideas to life with precision and creativity.
-          </p>
-
-          <p class="text-gray-200 text-justify">
-            I specialize in front-end web development and love building clean, responsive interfaces using modern tools like Vite and Tailwind CSS. I also have experience with JavaScript, HTML, CSS, PHP, and Laravel. I'm focused on writing code that supports intuitive, user-friendly design and runs flawlessly.
-          </p>
-
-          <p class="text-gray-200 text-justify">
-            Outside of web development, I work with Unreal Engine 5 to create interactive projects that challenge both my technical and creative thinking. I take pride in delivering polished results and constantly look for ways to improve and grow as a developer.
-          </p>
-        </div>
-
-        <!-- Foto + studie/locatie/email -->
-        <div class="order-2 md:order-1 flex flex-col items-center text-center md:items-start md:text-left fade-in md:slide-in-left">
-          <a href="https://www.linkedin.com/in/daan-friederich-softwaredeveloper-gamedeveloper/" class="relative w-[50vw] h-[50vw] mb-[4vh] mt-[5vw] md:mt-0 rounded-[2vw] overflow-hidden group shadow-xl border-accentGold-500 md:w-[18vw] md:h-[18vw] md:mb-[5vh]">
-            <img src="images/me.jpg" alt="Daan Friederich" class="object-cover w-full h-full rounded-2xl transition duration-500 md:group-hover:scale-105 md:group-hover:blur-sm" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-2xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#b4a978" class="w-[8vw] h-[8vw] md:w-[3.5vw] md:h-[3.5vw]">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.721-1.107 2.118-1.5 3.5-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
               </svg>
-            </div>
-          </a>
+            </a>
 
-          <ul class="space-y-[2vh] text-gray-300 text-[3.2vw] w-[80vw] md:space-y-[2vh] md:text-[0.8vw]">
-            <!-- Opleiding -->
-            <li class="flex items-center justify-center gap-[2vw] md:justify-start">
-              <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                <path d="M12 14l6.16-3.422A12.083 12.083 0 0118 13c0 2.21-3.582 4-8 4s-8-1.79-8-4a12.083 12.083 0 01-.16-2.422L12 14z"></path>
-              </svg>
-              <span class="block md:hidden">CMGT student @ Hogeschool Rotterdam</span>
-              <span class="hidden md:block">Creative Media &amp; Game Technologies, Hogeschool Rotterdam</span>
-            </li>
-            <!-- Locatie -->
-            <li class="flex items-center justify-center gap-[2vw] md:justify-start">
-              <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 20l-4.95-6.05a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-              </svg>
-              <span class="block md:hidden">Berkel en Rodenrijs (NL)</span>
-              <span class="hidden md:block">Berkel en Rodenrijs, The Netherlands</span>
-            </li>
-            <!-- Email -->
-            <li class="flex items-center justify-center gap-[2vw] md:justify-start">
-              <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-              </svg>
-              <span class="block md:hidden">daanfrie@gmail.com</span>
-              <span class="hidden md:block">daanfrie@gmail.com</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-[10vh] px-[5vw] bg-black text-white md:py-[10vh] md:px-[5vw] fade-in">
-      <div class="w-full mx-auto text-center">
-
-        <h2 class="text-[6.5vw] font-bold mb-[5vh] text-accentGold-500 md:text-[2vw] md:mb-[6vh]">
-          Skills &amp; Technologies
-        </h2>
-
-        <div class="flex flex-col items-center gap-[8vh] text-center md:flex-row md:flex-wrap md:justify-between md:text-left md:gap-[3vw]">
-
-          <!-- Frontend -->
-          <div class="w-[80vw] fade-in  md:slide-in-left md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
-            <h3 class="font-bold mb-[1.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
-              Frontend
-            </h3>
-            <p class="mb-[2vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
-              Building responsive and interactive user interfaces
-            </p>
-            <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.8vw]">
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">HTML5</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">CSS3</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">JavaScript</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Tailwind CSS</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Vite</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">React</span>
-            </div>
           </div>
 
-          <!-- Backend -->
-          <div class="w-full fade-in md:slide-in-left md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
-            <h3 class="font-bold mb-[1.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
-              Backend
-            </h3>
-            <p class="mb-[2vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
-              Server-side development and API design
-            </p>
-            <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.8vw]">
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">PHP</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Laravel</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">MySQL</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">SQLite</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">REST APIs</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Python</span>
-            </div>
+          <!-- Social icons -->
+          <div class="flex justify-center gap-[4vw] text-[3.5vw] md:gap-[2vw] md:text-[0.9vw]">
+            <!-- Social icons hier -->
           </div>
-
-          <!-- Game Dev -->
-          <div class="w-full fade-in md:slide-in-right md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
-            <h3 class="font-bold mb-[2.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
-              Game Dev
-            </h3>
-            <p class="mb-[3vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
-              Gameplay programming &amp; interactive environments
-            </p>
-            <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.8vw]">
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Unreal Engine 5</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Blueprints</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">3D Modeling</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Level Design</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Animation</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Excalibur</span>
-            </div>
-          </div>
-
-          <!-- Tools & Others -->
-          <div class="w-full fade-in md:slide-in-right md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
-            <h3 class="font-bold mb-[2.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
-              Tools & Others
-            </h3>
-            <p class="mb-[3vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
-              Development tools and methodologies
-            </p>
-            <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.5vw]">
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Git</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Figma</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">VS Code</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">PHPStorm</span>
-              <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Wireframing</span>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- About Section -->
+      <section id="about" class="py-[0vh] px-[5vw] bg-black text-gray-100 md:py-[12vh] md:px-[5vw]">
+        <div class="max-w-[90vw] mx-auto grid grid-cols-1 gap-[5vw] items-center md:max-w-[70vw] md:grid-cols-2 md:gap-[3vw] fade-in md:slide-in-left">
 
+          <!-- About Me Text -->
+          <div class="order-1 md:order-2 space-y-[4vw] leading-relaxed text-[3.5vw] px-[5vw] md:space-y-[3vh] md:text-[1vw] md:px-0">
+            <h2 class="font-bold text-accentGold-500 text-[9vw] text-center md:text-[2.5vw] md:text-left">
+              About Me
+            </h2>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-[10vh] bg-black">
-      <div class=" w-[85vw] md:w-[75vw] mx-auto">
-        <h2 class="text-[8vw] md:text-[2vw] font-bold text-accentGold-500  text-center mb-[6vh] fade-in">
-          My Projects
-        </h2>
+            <p class="text-gray-200 text-justify">
+              Hi, I'm Daan Friederich, a Creative Media &amp; Game Technologies student based in the Netherlands. I'm passionate about blending design and technology to create experiences that are both visually aesthetic and technically solid. Whether I'm working on a website or a game, I enjoy bringing ideas to life with precision and creativity.
+            </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-[6vh] md:gap-[4vw]">
+            <p class="text-gray-200 text-justify">
+              I specialize in front-end web development and love building clean, responsive interfaces using modern tools like Vite and Tailwind CSS. I also have experience with JavaScript, HTML, CSS, PHP, and Laravel. I'm focused on writing code that supports intuitive, user-friendly design and runs flawlessly.
+            </p>
 
-          <!-- Project 1 -->
-          <div class="project-card fade-in">
-            <div class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw]">
-              <img src="images/OpenHiring2portfolio.jpg" alt="Laravel Vacancy Website"
-                   class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                     class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
-                  <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+            <p class="text-gray-200 text-justify">
+              Outside of web development, I work with Unreal Engine 5 to create interactive projects that challenge both my technical and creative thinking. I take pride in delivering polished results and constantly look for ways to improve and grow as a developer.
+            </p>
+          </div>
+
+          <!-- Foto + studie/locatie/email -->
+          <div class="order-2 md:order-1 flex flex-col items-center text-center md:items-start md:text-left fade-in md:slide-in-left">
+            <a href="https://www.linkedin.com/in/daan-friederich-softwaredeveloper-gamedeveloper/" class="relative w-[50vw] h-[50vw] mb-[4vh] mt-[5vw] md:mt-0 rounded-[2vw] overflow-hidden group shadow-xl border-accentGold-500 md:w-[18vw] md:h-[18vw] md:mb-[5vh]">
+              <img src="images/me.jpg" alt="Daan Friederich" class="object-cover w-full h-full rounded-2xl transition duration-500 md:group-hover:scale-105 md:group-hover:blur-sm" />
+              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-2xl opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#b4a978" class="w-[8vw] h-[8vw] md:w-[3.5vw] md:h-[3.5vw]">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.721-1.107 2.118-1.5 3.5-1.5 2.481 0 4.5 2.019 4.5 4.5v5.5z"/>
                 </svg>
               </div>
+            </a>
+
+            <ul class="space-y-[2vh] text-gray-300 text-[3.2vw] w-[80vw] md:space-y-[2vh] md:text-[0.8vw]">
+              <!-- Opleiding -->
+              <li class="flex items-center justify-center gap-[2vw] md:justify-start">
+                <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                  <path d="M12 14l6.16-3.422A12.083 12.083 0 0118 13c0 2.21-3.582 4-8 4s-8-1.79-8-4a12.083 12.083 0 01-.16-2.422L12 14z"></path>
+                </svg>
+                <span class="block md:hidden">CMGT student @ Hogeschool Rotterdam</span>
+                <span class="hidden md:block">Creative Media &amp; Game Technologies, Hogeschool Rotterdam</span>
+              </li>
+              <!-- Locatie -->
+              <li class="flex items-center justify-center gap-[2vw] md:justify-start">
+                <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 20l-4.95-6.05a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <span class="block md:hidden">Berkel en Rodenrijs (NL)</span>
+                <span class="hidden md:block">Berkel en Rodenrijs, The Netherlands</span>
+              </li>
+              <!-- Email -->
+              <li class="flex items-center justify-center gap-[2vw] md:justify-start">
+                <svg class="w-[4.5vw] h-[4.5vw] text-accentGold-500 md:w-[1vw] md:h-[1vw]" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+                <span class="block md:hidden">daanfrie@gmail.com</span>
+                <span class="hidden md:block">daanfrie@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-[10vh] px-[5vw] bg-black text-white md:py-[10vh] md:px-[5vw] fade-in">
+        <div class="w-full mx-auto text-center">
+
+          <h2 class="text-[6.5vw] font-bold mb-[5vh] text-accentGold-500 md:text-[2vw] md:mb-[6vh]">
+            Skills &amp; Technologies
+          </h2>
+
+          <div class="flex flex-col items-center gap-[8vh] text-center md:flex-row md:flex-wrap md:justify-between md:text-left md:gap-[3vw]">
+
+            <!-- Frontend -->
+            <div class="w-[80vw] fade-in  md:slide-in-left md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
+              <h3 class="font-bold mb-[1.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
+                Frontend
+              </h3>
+              <p class="mb-[2vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
+                Building responsive and interactive user interfaces
+              </p>
+              <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.8vw]">
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">HTML5</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">CSS3</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">JavaScript</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Tailwind CSS</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Vite</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">React</span>
+              </div>
             </div>
 
-            <div>
-              <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
-                Laravel Vacancy Website
+            <!-- Backend -->
+            <div class="w-full fade-in md:slide-in-left md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
+              <h3 class="font-bold mb-[1.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
+                Backend
               </h3>
-              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
-                Complete Laravel platform for managing job vacancies anonymously including admin dashboard and user profiles (Group project).
+              <p class="mb-[2vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
+                Server-side development and API design
               </p>
+              <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.8vw]">
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">PHP</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Laravel</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">MySQL</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">SQLite</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">REST APIs</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Python</span>
+              </div>
+            </div>
 
-              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Laravel</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">PHP</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">MySQL</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">TailwindCSS</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Figma</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Git</span>
+            <!-- Game Dev -->
+            <div class="w-full fade-in md:slide-in-right md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
+              <h3 class="font-bold mb-[2.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
+                Game Dev
+              </h3>
+              <p class="mb-[3vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
+                Gameplay programming &amp; interactive environments
+              </p>
+              <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.8vw]">
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Unreal Engine 5</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Blueprints</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">3D Modeling</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Level Design</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Animation</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Excalibur</span>
+              </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div class="w-full fade-in md:slide-in-right md:flex-1 md:min-w-[220px] md:max-w-[calc(25vw-1.5rem)]">
+              <h3 class="font-bold mb-[2.5vh] text-[5.5vw] text-accentGold-500 md:mb-[1.5vw] md:text-[1.2vw]">
+                Tools & Others
+              </h3>
+              <p class="mb-[3vh] text-[4vw] leading-relaxed text-gray-400 md:mb-[2vw] md:text-[0.9vw]">
+                Development tools and methodologies
+              </p>
+              <div class="flex flex-wrap justify-center gap-[2.5vw] md:gap-[0.5vw]">
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Git</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Figma</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">VS Code</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">PHPStorm</span>
+                <span class="text-white border border-white rounded-full px-[2.5vw] py-[0.8vw] font-medium text-[3.5vw] md:px-[0.8vw] md:py-[0.2vw] md:text-[0.7vw]">Wireframing</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-[10vh] bg-black">
+        <div class=" w-[85vw] md:w-[75vw] mx-auto">
+          <h2 class="text-[8vw] md:text-[2vw] font-bold text-accentGold-500  text-center mb-[6vh] fade-in">
+            My Projects
+          </h2>
+
+          <div id="project-overview" class="grid grid-cols-1 md:grid-cols-3 gap-[6vh] md:gap-[4vw]">
+
+            <!-- Project 1 -->
+            <div class="project-card fade-in flex flex-col">
+              <!-- Klikbaar image-blok -->
+              <div data-id="1" class="project-trigger relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw] cursor-pointer">
+
+                <img src="images/OpenHiring2portfolio.jpg" alt="Laravel Vacancy Website"
+                     class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                       class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
+                    <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                  </svg>
+                </div>
               </div>
 
-              <div class="flex gap-3 md:gap-[0.6vw]">
-                <a href="https://github.com/GinusHR/TLE-Agency-Team6"
-                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+              <!-- Tekst en tags -->
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
+                  Laravel Vacancy Website
+                </h3>
+                <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                  Complete Laravel platform for managing job vacancies anonymously including admin dashboard and user profiles (Group project).
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Laravel</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">PHP</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">MySQL</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">TailwindCSS</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Figma</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Git</span>
+                </div>
+                <div class="mt-auto flex justify-start">
+                  <a href="https://github.com/GinusHR/TLE-Agency-Team6"
+                     class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
         <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out md:group-hover:opacity-0 md:gap-[0.5vw]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
@@ -373,355 +370,251 @@
           </svg>
           View on GitHub
         </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                         class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                      <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project-card fade-in flex flex-col">
+              <div data-id="2" class="project-trigger relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw] cursor-pointer">
+                <img src="images/ChatbotPortfolio1.png" alt="AI Geoguessr assistant"
+                     class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                       class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
                     <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                   </svg>
-                </a>
+                </div>
               </div>
-            </div>
-          </div>
-
-
-
-          <!-- Project 2 -->
-          <div class="project-card fade-in flex flex-col">
-            <!-- Afbeelding -->
-            <div class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw]">
-              <img src="images/ChatbotPortfolio1.png" alt="AI Chatbot"
-                   class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                     class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
-                  <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-                </svg>
-              </div>
-            </div>
-
-            <!-- Tekst en button-container -->
-            <div class="flex-1 flex flex-col">
-              <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
-                AI Geoguessr assistant
-              </h3>
-              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
-                An LLM JS chatbot powered by AI supporting Geoguessr players, showcasing prompting techniques and API integration.
-              </p>
-
-              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">JavaScript</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Vite</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">OpenAI</span>
-              </div>
-
-              <!-- btn onderaan duwen -->
-              <div class="mt-auto flex justify-start">
-                <a href="https://github.com/DaanFrie/LLM-project-Geoguessr-Chatbot"
-                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5
-                bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw]
-                font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black
-                md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
+                  AI Geoguessr assistant
+                </h3>
+                <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                  An LLM JS chatbot powered by AI supporting Geoguessr players, showcasing prompting techniques and API integration.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">JavaScript</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Vite</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">OpenAI</span>
+                </div>
+                <div class="mt-auto flex justify-start">
+                  <a href="https://github.com/DaanFrie/LLM-project-Geoguessr-Chatbot"
+                     class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
         <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out md:group-hover:opacity-0 md:gap-[0.5vw]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577
-                     0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61
-                     -.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
-                     1.205.084 1.84 1.237 1.84 1.237
-                     1.07 1.834 2.807 1.304 3.492.997
-                     .108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932
-                     0-1.31.468-2.382 1.235-3.222
-                     -.135-.303-.54-1.524.105-3.176
-                     0 0 1.005-.322 3.3 1.23
-                     a11.52 11.52 0 0 1 3.003-.404
-                     11.52 11.52 0 0 1 3.003.404
-                     c2.28-1.552 3.285-1.23 3.285-1.23
-                     .645 1.653.24 2.874.12 3.176
-                     .765.84 1.23 1.912 1.23 3.222
-                     0 4.61-2.805 5.625-5.475 5.92
-                     .435.375.81 1.102.81 2.222
-                     0 1.606-.015 2.896-.015 3.286
-                     0 .315.21.69.825.573
-                     C20.565 21.795 24 17.298 24 12
-                     24 5.373 18.627 0 12 0z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
           </svg>
           View on GitHub
         </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                         class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                      <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card fade-in flex flex-col">
+              <div data-id="3" class="project-trigger relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw] cursor-pointer">
+                <img src="images/ue5fpsparcourgamehome.png" alt="UE5 FPS Parcour Game"
+                     class="object-cover w-full h-auto transition-transform duration-500 md:group-hover:scale-110" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0
-                    md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out
-                    md:w-[1.6vw] md:h-[1.6vw]">
+                       class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
                     <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                   </svg>
-                </a>
+                </div>
               </div>
-            </div>
-          </div>
-
-
-
-          <!-- Project 3 -->
-          <div class="project-card fade-in flex flex-col">
-            <!-- Image -->
-            <div class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw]">
-              <img src="images/ue5fpsparcourgamehome.png" alt="UE5 FPS Parcour Game"
-                   class="object-cover w-full h-auto transition-transform duration-500 md:group-hover:scale-110" />
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                     class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
-                  <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-                </svg>
-              </div>
-            </div>
-
-            <!-- Content & Tags -->
-            <div class="flex-1 flex flex-col">
-              <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
-                UE5 FPS Parcour Game
-              </h3>
-              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
-                A first‑person speed‑running parcouring game built in Unreal Engine 5 showcasing advanced gameplay mechanics.
-              </p>
-
-              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Unreal Engine 5</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Blueprints</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Animating</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Level design</span>
-              </div>
-
-              <!-- Button pushed to bottom -->
-              <div class="mt-auto flex justify-start">
-                <a href="#"
-                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2
-                bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw]
-                font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black
-                md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.5vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
+                  UE5 FPS Parcour Game
+                </h3>
+                <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                  A first‑person speed‑running parcouring game built in Unreal Engine 5 showcasing advanced gameplay mechanics.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Unreal Engine 5</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Blueprints</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Animating</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Level design</span>
+                </div>
+                <div class="mt-auto flex justify-start">
+                  <a href="#"
+                     class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.5vw] md:text-[0.7vw] md:rounded-[0.7vw]">
         <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out md:group-hover:opacity-0 md:gap-[0.5vw]">
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="currentColor"
-     class="w-[3.5vw] h-[3.5vw] md:w-[1.2vw] md:h-[1.2vw]">
-  <path d="M8 5v14l11-7z" />
-</svg>
-
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+               class="w-[3.5vw] h-[3.5vw] md:w-[1.2vw] md:h-[1.2vw]">
+            <path d="M8 5v14l11-7z" />
+          </svg>
           Watch demo
         </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                         class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                      <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card fade-in flex flex-col">
+              <div data-id="4" class="project-trigger relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw] cursor-pointer">
+                <img src="images/nowaybackportfoliohome.png" alt="UE5 sustainability-awareness demo"
+                     class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0
-                    md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out
-                    md:w-[1.6vw] md:h-[1.6vw]">
+                       class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
                     <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                   </svg>
-                </a>
+                </div>
               </div>
-            </div>
-          </div>
-
-
-
-          <!-- Project 4 -->
-          <div class="project-card fade-in flex flex-col">
-            <div class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw]">
-              <img src="images/nowaybackportfoliohome.png" alt="UE5 sustainability-awareness demo"
-                   class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                     class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
-                  <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="flex-1 flex flex-col">
-              <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
-                UE5 sustainability-awareness demo
-              </h3>
-              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
-                An Unreal Engine 5 demo showcasing my level design skills with a focus on sustainability and environmental awareness.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Unreal Engine 5</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Blueprints</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Level design</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Animating</span>
-              </div>
-              <div class="mt-auto flex justify-start">
-                <a href="#"
-                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2
-                bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw]
-                font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black
-                md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
+                  UE5 sustainability-awareness demo
+                </h3>
+                <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                  An Unreal Engine 5 demo showcasing my level design skills with a focus on sustainability and environmental awareness.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Unreal Engine 5</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Blueprints</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Level design</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Animating</span>
+                </div>
+                <div class="mt-auto flex justify-start">
+                  <a href="#"
+                     class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
         <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out md:group-hover:opacity-0 md:gap-[0.5vw]">
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="currentColor"
-     class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
-  <path d="M8 5v14l11-7z" />
-</svg>
-
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+               class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
           Watch demo
         </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                         class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                      <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card fade-in flex flex-col">
+              <div data-id="5" class="project-trigger relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw] cursor-pointer">
+                <img src="images/SouthParkWebsiteportfoliohome.png" alt="PHP-JS South Park Website"
+                     class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0
-                    md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out
-                    md:w-[1.6vw] md:h-[1.6vw]">
+                       class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
                     <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                   </svg>
-                </a>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="project-card fade-in flex flex-col">
-            <div class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw]">
-              <img src="images/SouthParkWebsiteportfoliohome.png" alt="PHP-JS South Park Website"
-                   class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                     class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
-                  <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="flex-1 flex flex-col">
-              <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
-                PHP-JS South Park Website
-              </h3>
-              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
-                A PHP and JavaScript site where users create and share their own South Park characters, showcasing web dev and UX.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">PHP</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">CSS</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">HTML</span>
-              </div>
-              <div class="mt-auto flex justify-start">
-                <a href="https://github.com/DaanFrie/SouthParkMagazine"
-                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5
-                bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw]
-                font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black
-                md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
+                  PHP-JS South Park Website
+                </h3>
+                <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                  A PHP and JavaScript site where users create and share their own South Park characters, showcasing web dev and UX.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">PHP</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">CSS</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">HTML</span>
+                </div>
+                <div class="mt-auto flex justify-start">
+                  <a href="https://github.com/DaanFrie/SouthParkMagazine"
+                     class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
         <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out md:group-hover:opacity-0 md:gap-[0.5vw]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302
-                     3.438 9.8 8.205 11.387.6.113.82-.26.82-.577
-                     0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61
-                     -.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
-                     1.205.084 1.84 1.237 1.84 1.237
-                     1.07 1.834 2.807 1.304 3.492.997
-                     .108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932
-                     0-1.31.468-2.382 1.235-3.222
-                     -.135-.303-.54-1.524.105-3.176
-                     0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404
-                     11.52 11.52 0 0 1 3.003.404
-                     c2.28-1.552 3.285-1.23 3.285-1.23
-                     .645 1.653.24 2.874.12 3.176
-                     .765.84 1.23 1.912 1.23 3.222
-                     0 4.61-2.805 5.625-5.475 5.92
-                     .435.375.81 1.102.81 2.222
-                     0 1.606-.015 2.896-.015 3.286
-                     0 .315.21.69.825.573
-                     C20.565 21.795 24 17.298 24 12
-                     24 5.373 18.627 0 12 0z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
           </svg>
           View on GitHub
         </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                         class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                      <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card fade-in flex flex-col">
+              <div onclick="showDetail(6)" class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw] cursor-pointer">
+                <img src="images/geesecandriveportfoliohome.png" alt="Excalibur JS racing Game"
+                     class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                       class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
                     <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
                   </svg>
-                </a>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="project-card fade-in flex flex-col">
-            <div class="relative overflow-hidden rounded-[4vw] mb-[4vw] group md:rounded-[2vh] md:mb-[1.2vw]">
-              <img src="images/geesecandriveportfoliohome.png" alt="Excalibur JS racing Game"
-                   class="w-full h-auto transition-transform duration-500 md:group-hover:scale-110 filter" />
-              <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 md:group-hover:opacity-100 transition duration-500">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                     class="w-[7vw] h-[7vw] text-white opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[2.1vw] md:h-[2.1vw]">
-                  <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-                </svg>
-              </div>
-            </div>
-            <div class="flex-1 flex flex-col">
-              <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
-                Excalibur JS racing Game
-              </h3>
-              <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
-                A top-down racing game built with Excalibur.js featuring physics, sprint boosts & track design.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Excalibur.js</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">JavaScript</span>
-                <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Level design</span>
-              </div>
-              <div class="mt-auto flex justify-start">
-                <a href="https://github.com/DaanFrie/GEESECANDRIVE"
-                   class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5
-                bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw]
-                font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black
-                md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
+              <div class="flex-1 flex flex-col">
+                <h3 class="text-[4.5vw] font-bold text-accentGold-500 mb-[2.5vw] md:text-[1.2vw] md:mb-[0.8vw]">
+                  Excalibur JS racing Game
+                </h3>
+                <p class="text-gray-400 text-[3.2vw] leading-relaxed mb-[3.2vw] md:text-[0.75vw] md:mb-[1vw]">
+                  A top-down racing game built with Excalibur.js featuring physics, sprint boosts & track design.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-[4vw] md:gap-[0.5vw] md:mb-[1vw]">
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Excalibur.js</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">JavaScript</span>
+                  <span class="text-white border border-white rounded-full px-3 py-[0.5vw] font-medium text-[3vw] md:text-[0.75vw] md:px-[0.8vw] md:py-[0.2vw]">Level design</span>
+                </div>
+                <div class="mt-auto flex justify-start">
+                  <a href="https://github.com/DaanFrie/GEESECANDRIVE"
+                     class="relative group overflow-hidden flex items-center justify-center gap-2 px-2.5 py-2.5 bg-gradient-to-r from-accentGold-500 to-[#a39666] text-black rounded-xl text-[3vw] font-medium transition-all duration-300 ease-in-out md:hover:bg-black md:hover:from-black md:hover:to-black md:border-2 border-accentGold-500 md:gap-[0.5vw] md:px-[0.7vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.7vw]">
         <span class="flex items-center gap-2 transition-opacity duration-300 ease-in-out md:group-hover:opacity-0 md:gap-[0.5vw]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302
-                     3.438 9.8 8.205 11.387.6.113.82-.26.82-.577
-                     0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61
-                     -.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729
-                     1.205.084 1.84 1.237 1.84 1.237
-                     1.07 1.834 2.807 1.304 3.492.997
-                     .108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932
-                     0-1.31.468-2.382 1.235-3.222
-                     -.135-.303-.54-1.524.105-3.176
-                     0 0 1.005-.322 3.3 1.23
-                     a11.52 11.52 0 0 1 3.003-.404
-                     11.52 11.52 0 0 1 3.003.404
-                     c2.28-1.552 3.285-1.23 3.285-1.23
-                     .645 1.653.24 2.874.12 3.176
-                     .765.84 1.23 1.912 1.23 3.222
-                     0 4.61-2.805 5.625-5.475 5.92
-                     .435.375.81 1.102.81 2.222
-                     0 1.606-.015 2.896-.015 3.286
-                     0 .315.21.69.825.573
-                     C20.565 21.795 24 17.298 24 12
-                     24 5.373 18.627 0 12 0z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
           </svg>
           View on GitHub
         </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-                       class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
-                    <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
-                  </svg>
-                </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                         class="absolute inset-0 m-auto w-[6vw] h-[6vw] text-accentGold-500 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 ease-in-out md:w-[1.6vw] md:h-[1.6vw]">
+                      <path d="M0 226v32c128 192 384 192 512 0v-32C384 34 128 34 0 226zm256 144c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128zm0-200c0-8.3 1.7-16.1 4.3-23.6c-1.5-.1-2.8-.4-4.3-.4c-53 0-96 43-96 96s43 96 96 96s96-43 96-96c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3c-39.8 0-72-32.2-72-72z"/>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
+
           </div>
-
-
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div>
-      <!-- “View all projects” Button (reversed colors) -->
-      <div class="text-center  md:mt-[2vw] md:mb-0 mb-[1vh] mt-[2vw] fade-in">
-        <a
-                href="#"
-                class="relative group inline-flex items-center justify-center gap-[3.6vw]
+      <div>
+        <!-- "View all projects" Button (reversed colors) -->
+        <div class="text-center  md:mt-[2vw] md:mb-0 mb-[1vh] mt-[2vw] fade-in">
+          <a
+                  href="#"
+                  class="relative group inline-flex items-center justify-center gap-[3.6vw]
              px-[7.2vw] py-[3.15vw] bg-black text-accentGold-500 rounded-[2.7vw]
              text-[3.6vw] font-medium transition-all duration-300 ease-in-out
              border-2 border-accentGold-500
              md:gap-[0.5vw] md:px-[1.08vw] md:py-[0.72vw] md:rounded-[0.72vw] md:text-[0.81vw]
              md:hover:bg-accentGold-500 md:hover:text-black"
-        >
-          <!-- GitHub icoon + tekst -->
-          <span class="flex items-center gap-[3.6vw]
+          >
+            <!-- GitHub icoon + tekst -->
+            <span class="flex items-center gap-[3.6vw]
                    transition-opacity duration-300 ease-in-out
                    md:gap-[0.45vw] md:group-hover:opacity-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -744,12 +637,12 @@
         View all projects on my GitHub
       </span>
 
-          <!-- Oog icoon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
-               class="absolute w-[7.2vw] h-[7.2vw] text-black opacity-0
+            <!-- Oog icoon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                 class="absolute w-[7.2vw] h-[7.2vw] text-black opacity-0
                   transition-opacity duration-300 ease-in-out
                   md:w-[2.25vw] md:h-[2.25vw] md:group-hover:opacity-100">
-            <path d="M0 226v32c128 192 384 192 512 0v-32
+              <path d="M0 226v32c128 192 384 192 512 0v-32
                  C384 34 128 34 0 226zm256 144
                  c-70.7 0-128-57.3-128-128s57.3-128
                  128-128s128 57.3 128 128s-57.3 128-128 128zm0-200
@@ -757,10 +650,10 @@
                  c-53 0-96 43-96 96s43 96 96 96s96-43 96-96
                  c0-1.5-.4-2.8-.4-4.3c-7.4 2.6-15.3 4.3-23.6 4.3
                  c-39.8 0-72-32.2-72-72z"/>
-          </svg>
-        </a>
+            </svg>
+          </a>
+        </div>
       </div>
-    </div>
 
 
       <!-- Contact Section -->
@@ -864,13 +757,21 @@
       </footer>
     </div>
 
-
-
     <div id="custom-scrollbar">
-  <div id="scroll-indicator"></div>
-</div>
+      <div id="scroll-indicator"></div>
+    </div>
 
-<!-- Your JS -->
-</div>
-    </body>
+
+  </div>
+</main>
+
+<section id="project-detail" class="hidden fixed inset-0 overflow-y-auto bg-black text-white z-50 p-6">
+  <!-- Detail navbar - exact copy of main navbar -->
+
+
+  <!-- Detail content with padding for navbar -->
+  <div id="detail-content" class="pt-[80px]"></div>
+</section>
+
+</body>
 </html>

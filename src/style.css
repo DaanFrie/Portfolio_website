@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
 
 /* Reusable primary button */
 .btn-primary {
@@ -26,45 +23,32 @@
     }
 }
 
-
-html, body {
+html,
+body {
     overflow-x: hidden;
-
+    background-color: #000000; /* Ensure black background everywhere */
 }
 
-
-/* Verberg standaard scrollbar */
-html, body {
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE en Edge */
+/* Verberg standaard scrollbar - OVERAL */
+html,
+body,
+* {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE en Edge */
 }
+
 html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;              /* Chrome, Safari, Opera */
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
 }
 
-/* Custom scrollbar container */
+/* Custom scrollbar container - HIDDEN ON HOMEPAGE TOO */
 #custom-scrollbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 1vh;              /* scrollbar breedte */
-    height: 100vh;
-    background-color: #000000; /* zwart */
-
-    z-index: 9999;
+    display: none !important;
 }
-
-/* Scroll indicator (de “vulling”) */
-#scroll-indicator {
-    width: 100%;
-    height: 0;
-    background-color: #b4a978; /* goud */
-    border-radius: 0.1vw;
-    transition: height 0.2s ease-out;
-}
-
-
 
 * {
     font-family: "Domine", serif;
@@ -86,7 +70,7 @@ body::-webkit-scrollbar {
     transform: translateY(-8px) scale(1.02);
 }
 
-/* Fade & slide animations */
+/* Fade & slide animations - SAME FOR NAVBAR */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -119,7 +103,8 @@ body::-webkit-scrollbar {
 
 /* Float animation */
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0px);
     }
     50% {
@@ -141,7 +126,8 @@ body::-webkit-scrollbar {
 
 /* Pulse glow */
 @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
         box-shadow: 0 0 20px rgba(180, 169, 120, 0.3);
     }
     50% {
@@ -190,7 +176,9 @@ body::-webkit-scrollbar {
     animation: typewriter 3s steps(40, end);
 }
 
-.line1, .line2, .line3 {
+.line1,
+.line2,
+.line3 {
     transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
     transform-origin: center;
     background-color: white; /* komt overeen met Tailwind's bg-white */
@@ -199,7 +187,7 @@ body::-webkit-scrollbar {
 /* Actieve hamburger → perfect kruis én goud */
 .hamburger-active .line1 {
     transform: rotate(45deg) translate(1vw, 1.35vw);
-    background-color:#b4a978;
+    background-color: #b4a978;
 }
 .hamburger-active .line2 {
     opacity: 0;
@@ -210,13 +198,78 @@ body::-webkit-scrollbar {
     background-color: #b4a978;
 }
 
-
-
-
 /* Mobile width aanpassen */
 @media (max-width: 768px) {
     #custom-scrollbar {
-        width: 0; /* smaller op mobiel */
-
+        display: none !important;
     }
+}
+
+/* Project detail view styles */
+#project-detail {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000; /* Ensure black background */
+}
+
+/* Ensure detail view is above everything */
+#project-detail.block {
+    z-index: 49;
+}
+
+/* Smooth transitions for detail view */
+#project-detail .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+#project-detail .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure proper scrolling in detail view */
+#project-detail {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Navigation buttons - cleaner */
+#next-project-btn,
+#prev-project-btn {
+    box-shadow: 0 4px 15px rgba(180, 169, 120, 0.3);
+}
+
+#next-project-btn:hover,
+#prev-project-btn:hover {
+    box-shadow: 0 6px 20px rgba(180, 169, 120, 0.4);
+}
+
+/* Smooth slide animations - NO BOUNCE, LESS DISTANCE */
+main {
+    transition: transform 0.6s ease-in-out;
+    background-color: #000000; /* Ensure black background */
+}
+
+#project-detail {
+    transition: transform 0.6s ease-in-out;
+    background-color: #000000; /* Ensure black background */
+}
+
+/* Navbar transition - smooth fade */
+
+
+/* Ensure no white space during transitions */
+body {
+    background-color: #000000 !important;
+}
+
+#app {
+    background-color: #000000 !important;
 }
