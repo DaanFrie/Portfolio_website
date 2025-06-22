@@ -219,7 +219,7 @@ body::-webkit-scrollbar,
 
 /* Ensure detail view is above everything */
 #project-detail.block {
-    z-index: 49;
+    z-index: 20;
 }
 
 /* Smooth transitions for detail view */
@@ -243,13 +243,11 @@ body::-webkit-scrollbar,
 /* Navigation buttons - cleaner */
 #next-project-btn,
 #prev-project-btn {
-    box-shadow: 0 4px 15px rgba(180, 169, 120, 0.3);
+
 }
 
-#next-project-btn:hover,
-#prev-project-btn:hover {
-    box-shadow: 0 6px 20px rgba(180, 169, 120, 0.4);
-}
+
+
 
 /* Smooth slide animations - NO BOUNCE, LESS DISTANCE */
 main {
@@ -261,9 +259,6 @@ main {
     transition: transform 0.6s ease-in-out;
     background-color: #000000; /* Ensure black background */
 }
-
-/* Navbar transition - smooth fade */
-
 
 /* Ensure no white space during transitions */
 body {

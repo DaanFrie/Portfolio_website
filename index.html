@@ -44,27 +44,52 @@
 </head>
 
 <body>
-<!-- Navbar -->
-<nav id="main-navbar" class="w-full bg-black/90  backdrop-blur-sm fixed top-0 left-0 z-50  ">
-  <div class="w-[95vw] mx-auto px-[2vw] md:py-[1vw] py-[2vw] flex justify-between items-center ">
 
-    <!-- Hamburger menu button -->
+<!-- Project navigation buttons (alleen zichtbaar in project detail view) -->
+<nav id="project-nav-buttons" class="hidden fixed top-1/2 left-0 w-full z-40 pointer-events-none opacity-0 transition-opacity duration-500">
+  <!-- Prev button (links) -->
+  <button
+          id="prev-project-btn"
+          class="absolute left-[2vw] -translate-y-1/2 top-1/2 text-accentGold-500 transition pointer-events-auto md:hover:text-white"
+          aria-label="Previous Project"
+  >
+    <svg class="md:w-[2vw] md:h-[2vw] w-[3vh] h-[3vh]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+
+  <!-- Next button (rechts) -->
+  <button
+          id="next-project-btn"
+          class="absolute right-[2vw] -translate-y-1/2 top-1/2 text-accentGold-500 transition pointer-events-auto md:hover:text-white"
+          aria-label="Next Project"
+  >
+    <svg class="md:w-[2vw] md:h-[2vw] w-[3vh] h-[3vh]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</nav>
+
+
+<!-- Navbar -->
+<nav id="main-navbar" class="w-full bg-black/90 backdrop-blur-sm fixed top-0 left-0 z-50">
+  <div class="w-[95vw] mx-auto px-[2vw] md:py-[1vw] py-[2vw] flex justify-between items-center gap-[2vw]">
+
+    <!-- Hamburger menu button (mobile only) -->
     <button id="nav-toggle" class="order-1 md:hidden flex items-center p-[1vw] z-[999]">
       <div class="relative w-[6vw] h-[4vw]">
         <span class="absolute top-0 left-0 w-full h-[0.5vw] bg-white line1"></span>
         <span class="absolute top-1/2 left-0 w-full h-[0.4vw] bg-white -translate-y-1/2 scale-y-95 line2"></span>
-
         <span class="absolute bottom-0 left-0 w-full h-[0.5vw] bg-white line3"></span>
       </div>
     </button>
-
 
     <!-- Site naam -->
     <div class="order-2 md:order-1 text-[5vw] md:text-[1.2vw] font-bold text-accentGold-500 invisible md:visible">
       Daan Friederich
     </div>
 
-    <!-- Desktop links -->
+    <!-- Desktop nav links -->
     <div class="hidden md:flex items-center gap-[1.5vw] md:order-2">
       <a href="#hero" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Home</a>
       <a href="#about" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">About</a>
@@ -72,24 +97,31 @@
       <a href="#projects" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Projects</a>
       <a href="#contact" class="text-white md:hover:text-accentGold-500 transition-colors text-[0.7vw] nav-link">Contact</a>
     </div>
+
+
   </div>
 
   <!-- Mobile fullscreen menu -->
   <div id="nav-menu" class="fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/100 flex flex-col justify-center items-center transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
-
-    <!-- Menu items gecentreerd -->
     <nav class="flex flex-col items-center gap-[8vw]">
-      <a href="#hero" class="text-accentGold-500 text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Home</a>
-      <a href="#about" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">About</a>
-      <a href="#skills" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Skills</a>
-      <a href="#projects" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Projects</a>
-      <a href="#contact" class="text-white text-[7vw] font-semibold tracking-wide md:hover:text-accentGold-500 transition duration-200 md:hover:scale-105 nav-link">Contact</a>
+      <a href="#hero" class="text-accentGold-500 text-[7vw] font-semibold tracking-wide nav-link">Home</a>
+      <a href="#about" class="text-white text-[7vw] font-semibold tracking-wide nav-link">About</a>
+      <a href="#skills" class="text-white text-[7vw] font-semibold tracking-wide nav-link">Skills</a>
+      <a href="#projects" class="text-white text-[7vw] font-semibold tracking-wide nav-link">Projects</a>
+      <a href="#contact" class="text-white text-[7vw] font-semibold tracking-wide nav-link">Contact</a>
     </nav>
   </div>
+
+
+
+
+
 
   <!-- Overlay -->
   <div id="nav-overlay" class="fixed inset-0 bg-black/90  pointer-events-none transition-opacity duration-300 md:hidden z-40"></div>
 </nav>
+
+
 <main>
   <div id="app">
     <div class="min-h-screen bg-black  bg-no-repeat bg-center bg-contain bg-blend-overlay text-gray-100 scroll-smooth">
