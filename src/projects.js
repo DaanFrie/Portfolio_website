@@ -62,7 +62,7 @@ export const projects = [
        
     `,
         technicalDescription: `
-       I built this game in unreal engine 5 using blueprints. I also did de animating of de character en de level design. 
+       I built this game in unreal engine 5 using blueprints. I also did de animating of de character en de level design. Working on this game i mainly focussed on the mechanics and gameplay, so i am sure i have a stable foundation to build on. i spent a lot of time perfecting the dash mechanic and the sniping mechanics to make them feel satisfying and rewarding. I also spent a lot of time designing levels to find out what is fun and what isn't, intentionally leaving out the graphics and visuals for now.
        <br>  <br> 
        The game is still in development and I will be focussing on de graphics and visuals of de game since I haven't worked on that yet. I will also be adding more levels and more advanced gameplay mechanics to give it more depth and replayability.
     `,
