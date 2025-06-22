@@ -163,7 +163,7 @@ function generateProjectDetailHTML(project) {
                         ${project.title}
                     </h1>
 
-                    <!-- Hero image - SMALLER & CLEANER -->
+                    <!-- Hero image -->
                     <div class="mb-[6vw] md:mb-[4vh] fade-in">
                         <div class="relative overflow-hidden rounded-[2vw] md:rounded-[1vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[35vw]">
                             <img src="${project.image}" 
@@ -172,10 +172,9 @@ function generateProjectDetailHTML(project) {
                         </div>
                     </div>
 
-                    <!-- Clean two-column layout -->
-                    <div class="grid grid-cols-1 gap-[6vw] md:grid-cols-2 md:gap-[3vw] mb-[6vw] md:mb-[4vh]">
-                        
-                        <!-- Left column - Description -->
+                    <!-- Two-column layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-[6vw] md:gap-[3vw] mb-[6vw] md:mb-[4vh]">
+                        <!-- Left column: About & Links -->
                         <div class="fade-in">
                             <h2 class="text-[4vw] font-bold text-accentGold-500 mb-[3vw] md:text-[1.2vw] md:mb-[1.5vh]">
                                 About This Project
@@ -183,35 +182,50 @@ function generateProjectDetailHTML(project) {
                             <p class="text-[3.5vw] text-gray-300 leading-relaxed mb-[4vw] md:text-[0.9vw] md:leading-relaxed md:mb-[2vh]">
                                 ${project.description}
                             </p>
-                            
-                            ${getProjectSpecificContent(project)}
-                        </div>
-
-                        <!-- Right column - Tech & Links -->
-                        <div class="fade-in">
-                            <h3 class="text-[4vw] font-bold text-accentGold-500 mb-[3vw] md:text-[1.2vw] md:mb-[1.5vh]">
-                                Technologies
-                            </h3>
-                            <div class="flex flex-wrap gap-[1.5vw] mb-[4vw] md:gap-[0.4vw] md:mb-[2vh]">
-                                ${project.tags
-        .map(
-            (tag) => `
-                                            <span class="text-white border border-gray-600 rounded-full px-[2vw] py-[0.5vw] font-medium text-[3vw] md:px-[0.6vw] md:py-[0.15vw] md:text-[0.6vw]">${tag}</span>
-                                        `,
-        )
-        .join("")}
-                            </div>
-
-                            <!-- Project links - cleaner -->
                             <div class="space-y-[3vw] md:space-y-[1vh]">
                                 ${generateProjectLinks(project)}
                             </div>
                         </div>
+
+                        <!-- Right column: Technical & Tech stack -->
+                        <div class="fade-in">
+                            <h2 class="text-[4vw] font-bold text-accentGold-500 mb-[3vw] md:text-[1.2vw] md:mb-[1.5vh]">
+                                Technical Details
+                            </h2>
+                            <p class="text-[3.5vw] text-gray-300 leading-relaxed mb-[4vw] md:text-[0.9vw] md:leading-relaxed md:mb-[2vh]">
+                                ${project.technicalDescription}
+                            </p>
+
+                            <h3 class="text-[4vw] font-bold text-accentGold-500 mb-[3vw] md:text-[1.2vw] md:mb-[1.5vh]">
+                                Technologies
+                            </h3>
+                            <div class="flex flex-wrap gap-[1.5vw] mb-[4vw] md:gap-[0.4vw] md:mb-[2vh]">
+                                ${project.tags.map(tag => `
+                                    <span class="text-white border border-gray-600 rounded-full px-[2vw] py-[0.5vw] font-medium text-[3vw] md:px-[0.6vw] md:py-[0.15vw] md:text-[0.6vw]">
+                                        ${tag}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Back to homepage button - cleaner -->
-                    <div class="text-center fade-in">
-                        <button id="back-to-homepage-btn" 
+                    <!-- Showcase Gallery -->
+                    ${project.showcaseImages ? `
+                    <div class="fade-in mb-[6vw]">
+                        <h3 class="text-[5vw] font-bold text-accentGold-500 mb-[4vw] md:text-[1.5vw] md:mb-[2vh]">Showcase</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-[4vw] md:gap-[2vw]">
+                            ${project.showcaseImages.map(src => `
+                                <div class="overflow-hidden rounded-[2vw] md:rounded-[1vh] shadow-lg">
+                                    <img src="${src}" alt="Showcase image" class="w-full h-auto object-cover" />
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Back to homepage button -->
+                    <div class="text-center fade-in mt-[6vw]">
+                        <button id="back-to-homepage-btn"
                                 class="inline-flex items-center justify-center gap-[2vw] px-[4vw] py-[2vw] bg-black text-accentGold-500 rounded-lg text-[3.5vw] font-medium transition-all duration-300 ease-in-out border border-accentGold-500 hover:bg-accentGold-500 hover:text-black md:gap-[0.4vw] md:px-[1.5vw] md:py-[0.8vw] md:rounded-[0.5vw] md:text-[0.8vw]">
                             <svg class="w-[3.5vw] h-[3.5vw] md:w-[0.8vw] md:h-[0.8vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 12l6-6M3 12l6 6"/>
@@ -224,6 +238,8 @@ function generateProjectDetailHTML(project) {
         </div>
     `;
 }
+
+
 
 // REFACTORED: Extract project links generation to separate function
 function generateProjectLinks(project) {

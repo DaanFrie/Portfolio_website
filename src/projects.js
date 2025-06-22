@@ -5,81 +5,150 @@ export const projects = [
         title: "Laravel Vacancy Website",
         image: "images/OpenHiring2portfolio.jpg",
         description: `
-      Deze Laravel‑applicatie biedt een complete oplossing voor het anoniem plaatsen en beheren van
-      vacatures. Gebruikers kunnen eenvoudig profielen aanmaken, vacatures plaatsen en solliciteren
-      zonder persoonlijke gegevens openbaar te maken. De admin‑dashboard bevat uitgebreide statistieken
-      en moderatie­tools, geavanceerde zoek­functionaliteit en gebruikers­rolebeheer.
+      This Laravel application provides a complete solution for anonymously posting and managing job vacancies. 
+      Users can easily create profiles, post openings, and apply without revealing personal information. 
+      The admin dashboard offers detailed statistics, moderation tools, advanced search functionality, 
+      and role-based access control.
     `,
-        tags: ["Laravel", "PHP", "MySQL", "TailwindCSS", "Figma", "Git"],
+        technicalDescription: `
+      Built with Laravel 9, using Eloquent ORM for MySQL database interactions. 
+      Authentication and authorization handled via Laravel Sanctum. 
+      Real-time dashboard updates powered by Livewire. 
+      Front-end styled entirely in Tailwind CSS. 
+      Unit and feature tests implemented using PHPUnit.
+    `,
+        tags: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Figma", "Git"],
         github: "https://github.com/GinusHR/TLE-Agency-Team6",
-        live: "#"
+        live: "#",
+        showcaseImages: [
+            "images/showcase1-1.jpg",
+            "images/showcase1-2.jpg",
+            "images/showcase1-3.jpg"
+        ]
     },
     {
         id: 2,
         title: "AI Geoguessr Assistant",
         image: "images/ChatbotPortfolio1.png",
         description: `
-      Een innovatieve chatbot gebouwd met een JavaScript‑LLM, geoptimaliseerd voor Geoguessr‑spelers.
-      De assistent analyseert hints, geeft locatie­voorspellingen en leert continu bij via
-      API‑integratie met OpenAI. Ideaal voor zowel beginners als gevorderden die hun score willen
-      verbeteren met slimme prompting­technieken.
+      An innovative chatbot built with a JavaScript LLM optimized for Geoguessr players. 
+      It analyzes hints, provides location predictions, and continuously learns via the OpenAI API. 
+      Ideal for both beginners and advanced users seeking to improve their scores with smart prompting techniques.
     `,
-        tags: ["JavaScript", "Vite", "OpenAI"],
+        technicalDescription: `
+      A browser-based assistant written in vanilla JavaScript and bundled with Vite. 
+      Uses the OpenAI Node client to send and receive prompts. 
+      State management handled by simple observable patterns. 
+      Geo-data parsing performed with custom regex, and caching implemented for faster repeated queries.
+    `,
+        tags: ["JavaScript", "Vite", "OpenAI API"],
         github: "https://github.com/DaanFrie/LLM-project-Geoguessr-Chatbot",
-        live: "#"
+        live: "#",
+        showcaseImages: [
+            "images/showcase2-1.jpg",
+            "images/showcase2-2.jpg",
+            "images/showcase2-3.jpg"
+        ]
     },
     {
         id: 3,
-        title: "UE5 FPS Parcour Game",
+        title: "UE5 FPS Parkour Game",
         image: "images/ue5fpsparcourgamehome.png",
         description: `
-      Een first‑person parcours‑game ontwikkeld in Unreal Engine 5, waarin snelheid en behendigheid
-      centraal staan. Spelers rennen, springen en gebruiken geavanceerde gameplay­mechanieken zoals
-      air‑dashes en wall‑runs om door uitdagende levels te navigeren. Inclusief custom Blueprints
-      en C++‑scripting voor vloeiende physics en responsieve controls.
+      A first person sniper rifle parkour game developed in Unreal Engine 5. Players run, jump, snipe and use advanced gameplay mechanics like air-dashes and wall-runs to navigate through challenging levels. By sniping and killing an enemy you gain a dash, which you can use to make difficult jumps. the game will get progressively harder and will require you to snipe multiple enemies mid-air to complete the level.
+       <br>  <br> 
+       The game will feature a timer and leaderboard system to encourage speedrunners to compete for the best times. The game is focused on very challenging fast-paced gameplay that feels satisfying and rewarding. Part of the fun is having to grind for hours to make it through the later levels while being easy to pick up and play for beginners.
+
+       
+    `,
+        technicalDescription: `
+       I built this game in unreal engine 5 using blueprints. I also did de animating of de character en de level design. 
+       <br>  <br> 
+       The game is still in development and I will be focussing on de graphics and visuals of de game since I haven't worked on that yet. I will also be adding more levels and more advanced gameplay mechanics to give it more depth and replayability.
     `,
         tags: ["Unreal Engine 5", "Blueprints", "C++", "Level Design"],
         github: "#",
-        live: "#"
+        live: "#",
+        showcaseImages: [
+            "images/showcase3-1.jpg",
+            "images/showcase3-2.jpg",
+            "images/showcase3-3.jpg"
+        ]
     },
     {
         id: 4,
         title: "UE5 Sustainability Demo",
         image: "images/nowaybackportfoliohome.png",
         description: `
-      Een demo in Unreal Engine 5 die bewustzijn creëert rond duurzaamheid via interactieve
-      leveldesigns. Bezoekers verkennen een virtuele wereld waarin ecologische uitdagingen
-      (zoals water­behoud en herbebossing) visueel en gameplay­matig worden verteld. Gemaakt met
-      dynamische verlichtings­effecten en environmentally driven animaties.
+      A demo in Unreal Engine 5 designed to raise sustainability awareness through interactive level design. 
+      Visitors explore a virtual world where ecological challenges—such as water conservation 
+      and reforestation—are conveyed visually and through gameplay. 
+      Created with dynamic lighting effects and environment-driven animations.
+    `,
+        technicalDescription: `
+      Built in Unreal Engine 5 with Blueprints for interactive triggers and environmental storytelling. 
+      Implements a dynamic day-night cycle using Directional Light en Sky Atmosphere. 
+      Procedural foliage placement achieved via de Foliage tool. 
+      Animations en effects crafted in Niagara for realistic water droplets and flame simulations.
     `,
         tags: ["Unreal Engine 5", "Blueprints", "Level Design", "Animation"],
         github: "#",
-        live: "#"
+        live: "#",
+        showcaseImages: [
+            "images/showcase4-1.jpg",
+            "images/showcase4-2.jpg",
+            "images/showcase4-3.jpg"
+        ]
     },
     {
         id: 5,
-        title: "PHP‑JS South Park Website",
+        title: "PHP-JS South Park Fan Site",
         image: "images/SouthParkWebsiteportfoliohome.png",
         description: `
-      Een fan‑site waarin gebruikers hun eigen South Park‑karakters kunnen creëren, delen en beoordelen.
-      De backend draait op PHP met een MySQL‑database, terwijl de frontend gebruikmaakt van JavaScript
-      voor real‑time interactiviteit. Inclusief profiel­beheer, karaktergalerijen en sociaal delen.
+      A fan site where users can create, share, and rate their own South Park characters. 
+      The backend is powered by raw PHP and MySQL, while the frontend uses JavaScript for 
+      real-time interactivity. Features include profile management, character galleries, 
+      and social sharing.
+    `,
+        technicalDescription: `
+      Backend developed in vanilla PHP with PDO for secure MySQL connections. 
+      Frontend interactivity implemented in vanilla JavaScript with drag-and-drop character creation. 
+      AJAX requests handled via the Fetch API for real-time updates. 
+      Responsive layout achieved with CSS Grid and Flexbox. 
+      Server-side validation and CSRF protection ensure secure form submissions.
     `,
         tags: ["PHP", "JavaScript", "CSS", "HTML", "MySQL"],
         github: "https://github.com/DaanFrie/SouthParkMagazine",
-        live: "#"
+        live: "#",
+        showcaseImages: [
+            "images/showcase5-1.jpg",
+            "images/showcase5-2.jpg",
+            "images/showcase5-3.jpg"
+        ]
     },
     {
         id: 6,
         title: "Excalibur.js Racing Game",
         image: "images/geesecandriveportfoliohome.png",
         description: `
-      Een top‑down racing game gemaakt met Excalibur.js, waarin spelers snelle circuits en
-      sprint­boosts gebruiken om tegen de klok of tegen vrienden te racen. Met eenvoudig te
-      volgen physics, aanpasbare voertuigen en uitdagend baan­ontwerp. Perfect voor casual competitieve sessies.
+      A top-down racing game built with Excalibur.js, where players navigate fast circuits 
+      and use sprint boosts to race against the clock or friends. Features simple yet engaging 
+      physics, customizable vehicles, and challenging track design, perfect for casual competitive sessions.
+    `,
+        technicalDescription: `
+      Built with Excalibur.js for 2D game engine functionality: scenes, actors, and collision detection. 
+      Physics implemented through custom vector-based movement. 
+      Asset loading optimized using sprite sheets. 
+      UI en HUD integrated with DOM elements. 
+      High score persistence handled via de LocalStorage API.
     `,
         tags: ["Excalibur.js", "JavaScript", "Game Design"],
         github: "https://github.com/DaanFrie/GEESECANDRIVE",
-        live: "#"
+        live: "#",
+        showcaseImages: [
+            "images/showcase6-1.jpg",
+            "images/showcase6-2.jpg",
+            "images/showcase6-3.jpg"
+        ]
     }
 ];
