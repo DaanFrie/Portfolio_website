@@ -70,9 +70,9 @@ export const projects = [
         github: "#",
         live: "#",
         showcaseImages: [
-            "images/showcase3-1.jpg",
-            "images/showcase3-2.jpg",
-            "images/showcase3-3.jpg"
+            "images/showcase/FPSparkour/fpsparcourgame1.png",
+            "images/showcase/FPSparkour/fpsparcourgame2.png",
+            "images/showcase/FPSparkour/fpsparcourgame3.png",
         ]
     },
     {

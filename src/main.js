@@ -152,25 +152,35 @@ function hideProjectNavButtons() {
 
 // REFACTORED: Extract HTML template generation to separate function
 function generateProjectDetailHTML(project) {
+    // Hero: image or video for project 3
+    const heroMedia = project.id === 3
+        ? `
+        <div class="mb-[6vw] md:mb-[4vh] fade-in">
+          <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vw] md:rounded-[1vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+            <source src="videos/ue5fpsparkourgame/ue5fpsparkourgamegameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>`
+        : `
+        <div class="mb-[6vw] md:mb-[4vh] fade-in">
+          <div class="relative overflow-hidden rounded-[2vw] md:rounded-[1vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+            <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover" />
+          </div>
+        </div>`;
+
     return `
         <div class="min-h-screen bg-black text-white">
             <!-- Main content -->
             <div class="pt-[6vw] pb-[8vw] px-[4vw] md:pt-[4vh] md:pb-[6vh] md:px-[6vw]">
-                <div class="max-w-[80vw] mx-auto md:max-w-[65vw]">
+                <div class="max-w-[80vw] mx-auto md:max-w-[75vw]">
                     
                     <!-- Project title -->
                     <h1 class="text-[7vw] font-bold mb-[4vw] text-accentGold-500 text-center md:text-[2.5vw] md:mb-[3vh] md:text-left fade-in">
                         ${project.title}
                     </h1>
 
-                    <!-- Hero image -->
-                    <div class="mb-[6vw] md:mb-[4vh] fade-in">
-                        <div class="relative overflow-hidden rounded-[2vw] md:rounded-[1vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[35vw]">
-                            <img src="${project.image}" 
-                                 alt="${project.title}" 
-                                 class="w-full h-auto object-cover" />
-                        </div>
-                    </div>
+                    <!-- Hero media -->
+                    ${heroMedia}
 
                     <!-- Two-column layout -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-[6vw] md:gap-[3vw] mb-[6vw] md:mb-[4vh]">
