@@ -156,14 +156,14 @@ function generateProjectDetailHTML(project) {
     const heroMedia = project.id === 3
         ? `
         <div class="mb-[6vw] md:mb-[4vh] fade-in">
-          <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vw] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+          <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
             <source src="videos/ue5fpsparkourgame/ue5fpsparkourgamegameplay.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>`
         : `
         <div class="mb-[6vw] md:mb-[4vh] fade-in">
-          <div class="relative overflow-hidden rounded-[2vw] md:rounded-[1vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+          <div class="relative overflow-hidden rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
             <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover" />
           </div>
         </div>`;
@@ -225,7 +225,7 @@ function generateProjectDetailHTML(project) {
                         <h3 class="text-[5vw] font-bold text-accentGold-500 mb-[4vw] md:text-[1.5vw] md:mb-[2vh]">Showcase</h3>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-[4vw] md:gap-[2vw]">
                             ${project.showcaseImages.map(src => `
-                                <div class="overflow-hidden rounded-[2vw] md:rounded-[1vh] shadow-lg">
+                                <div class="overflow-hidden rounded-[2vh] md:rounded-[2vh] shadow-lg">
                                     <img src="${src}" alt="Showcase image" class="w-full h-auto object-cover" />
                                 </div>
                             `).join('')}
