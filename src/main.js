@@ -156,7 +156,7 @@ function generateProjectDetailHTML(project) {
     const heroMedia = project.id === 3
         ? `
         <div class="mb-[6vw] md:mb-[4vh] fade-in">
-          <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vw] md:rounded-[1vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+          <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vw] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
             <source src="videos/ue5fpsparkourgame/ue5fpsparkourgamegameplay.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
