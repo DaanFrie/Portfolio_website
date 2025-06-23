@@ -3,11 +3,12 @@ export const projects = [
     {
         id: 1,
         title: "UE5 FPS Parkour Game",
-        image: "images/ue5fpsparcourgamehome.png",
+        image: "images/ue5fpsparkourhome.png",
         videoSrc: "videos/ue5fpsparkourgame/ue5fpsparkourgamegameplay.mp4" ,
         videoPoster: "videos/ue5fpsparkourgame/ue5fpsparkourgameposter.png",
         description: `
-      A first person sniper rifle parkour game developed in Unreal Engine 5. Players run, jump, snipe and use advanced gameplay mechanics like air-dashes and wall-runs to navigate through challenging levels. By sniping and killing an enemy you gain a dash, which you can use to make difficult jumps. the game will get progressively harder and will require you to snipe multiple enemies mid-air to complete the level.
+      A first person sniper rifle parkour game developed in Unreal Engine 5. Players run, jump, snipe and use advanced gameplay mechanics like air-dashes and wall-runs to navigate through challenging levels. Sniping and killing an enemy or running on walls grants you a dash, which can be used to make difficult jumps.
+ the game will get progressively harder and will require you to snipe multiple enemies mid-air to complete the level.
        <br>  <br> 
        The game will feature a timer and leaderboard system to encourage speedrunners to compete for the best times. The game is focused on very challenging fast-paced gameplay that feels satisfying and rewarding. Part of the fun is having to grind for hours to make it through the later levels while being easy to pick up and play for beginners.
 
@@ -18,7 +19,7 @@ export const projects = [
        <br>  <br> 
        The game is still in development and I will be focussing on de graphics and visuals of de game since I haven't worked on that yet. I will also be adding more levels and more advanced gameplay mechanics to give it more depth and replayability.
     `,
-        tags: ["Unreal Engine 5", "Blueprints", "C++", "Level Design"],
+        tags: ["Unreal Engine 5", "Blueprints", "Animation", "Level Design"],
         github: "#",
         live: "#",
         showcaseImages: [
@@ -43,7 +44,7 @@ An LLM Geoguessr assistant that helps you guess the location in the game Geogues
         technicalDescription: `
 I used embeddings and system prompts to create a chatbot awsners the user accordingly. It only awsners questions about geoguesser and helps the player identify the courty they are in. I used React and CSS for the frontend of the website, and Vite for the build tool.
     `,
-        tags: ["JavaScript", "Vite", "OpenAI API"],
+        tags: ["JavaScript", "Vite", "OpenAI API", "React", "CSS", "Prompt Engineering"],
         github: "https://github.com/DaanFrie/LLM-project-Geoguessr-Chatbot",
         live: "#",
         showcaseImages: [
