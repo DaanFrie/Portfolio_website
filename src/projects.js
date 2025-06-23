@@ -162,7 +162,7 @@ High scores are stored locally using the browser's LocalStorage API, allowing th
     `,
         tags: ["Excalibur.js", "JavaScript", "Game Design"],
         github: "https://github.com/DaanFrie/GEESECANDRIVE",
-        live: "#",
+        live: "https://daanfrie.github.io/GEESECANDRIVE/",
         showcaseImages: [
             "images/showcase/geesecandrive/geesecandrive1.png",
             "images/showcase/geesecandrive/geesecandrive2.png",

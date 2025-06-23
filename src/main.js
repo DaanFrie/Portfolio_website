@@ -236,7 +236,7 @@ function generateProjectDetailHTML(project) {
                     <!-- Back to homepage button -->
                     <div class="text-center fade-in mt-[6vw]">
                         <button id="back-to-homepage-btn"
-                                class="inline-flex items-center justify-center gap-[2vw] px-[4vw] py-[2vw] bg-black text-accentGold-500 rounded-lg text-[3.5vw] font-medium transition-all duration-300 ease-in-out border border-accentGold-500 hover:bg-accentGold-500 hover:text-black md:gap-[0.4vw] md:px-[1.5vw] md:py-[0.8vw] md:rounded-[0.5vw] md:text-[0.8vw]">
+                                class="inline-flex items-center justify-center gap-[3vw] px-[5vw] py-[2.5vw] bg-black text-accentGold-500 rounded-[1.5vh] text-[3.5vw] font-medium transition-all duration-300 ease-in-out border border-accentGold-500 hover:bg-accentGold-500 hover:text-black md:gap-[0.4vw] md:px-[1.5vw] md:py-[0.8vw] md:rounded-[0.7vw] md:text-[0.8vw]">
                             <svg class="w-[3.5vw] h-[3.5vw] md:w-[0.8vw] md:h-[0.8vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h18M3 12l6-6M3 12l6 6"/>
                             </svg>
@@ -258,10 +258,13 @@ function generateProjectLinks(project) {
     if (project.github !== "#") {
         links += `
             <a href="${project.github}" target="_blank" 
-               class="flex items-center gap-[2vw] px-[3vw] py-[1.5vw] bg-accentGold-500 text-black rounded-lg text-[3vw] font-medium transition-all duration-300 ease-in-out hover:bg-accentGold-600 md:gap-[0.4vw] md:px-[1vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.4vw]">
-                <svg class="w-[3.5vw] h-[3.5vw] md:w-[0.8vw] md:h-[0.8vw]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
-                </svg>
+               class="group inline-flex items-center gap-[2vw] px-[3vw] py-[3vw] bg-accentGold-500 text-black rounded-[1.2vh] text-[3vw] font-medium transition-all duration-300 ease-in-out 
+                      hover:bg-black hover:text-accentGold-500 hover:border hover:border-accentGold-500
+                      md:gap-[0.4vw] md:px-[1vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.4vw]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+               class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.3-5.467-1.334-5.467-5.932 0-1.31.468-2.382 1.235-3.222-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.52 11.52 0 0 1 3.003-.404 11.52 11.52 0 0 1 3.003.404c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.874.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.573C20.565 21.795 24 17.298 24 12 24 5.373 18.627 0 12 0z"/>
+          </svg>
                 View on GitHub
             </a>
         `;
@@ -269,17 +272,20 @@ function generateProjectLinks(project) {
 
     if (project.live !== "#") {
         links += `
-            <a href="${project.live}" target="_blank" 
-               class="flex items-center gap-[2vw] px-[3vw] py-[1.5vw] bg-gray-800 text-white rounded-lg text-[3vw] font-medium transition-all duration-300 ease-in-out hover:bg-gray-700 md:gap-[0.4vw] md:px-[1vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.4vw]">
-                <svg class="w-[3.5vw] h-[3.5vw] md:w-[0.8vw] md:h-[0.8vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                </svg>
-                View Live Site
-            </a>
-        `;
+        <a href="${project.live}" target="_blank" 
+           class="group inline-flex items-center gap-[2vw] px-[3vw] py-[3vw] bg-black text-accentGold-500 border border-accentGold-500 rounded-[1.2vh] text-[3vw] font-medium transition-all duration-300 ease-in-out 
+                  hover:bg-accentGold-500 hover:text-black 
+                  md:gap-[0.4vw] md:px-[1vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.6vw]">
+            <svg class="w-[3.5vw] h-[3.5vw] md:w-[0.8vw] md:h-[0.8vw]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            Play Live
+        </a>
+    `;
     }
 
-    return links;
+
+    return `<div class="flex gap-4 flex-wrap">${links}</div>`;
 }
 
 
