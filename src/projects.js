@@ -87,7 +87,7 @@ I used embeddings and system prompts to create a chatbot awsners the user accord
         id: 4,
         title: "UE5 Sustainability Demo",
         image: "images/nowaybackportfoliohome.png",
-        videoSrc: "videos/ue5sustainability/ue5sustainabilitydemovideo.mp4",
+        videoSrc: "videos/ue5sustainability/ue5sustainabilitydemovideocomp.mp4",
         videoPoster: "videos/ue5sustainability/ue5sustainabilityposter.png",
         description: `
         A demo for a game in unreal engine 5 for an post-apocalyptic extraction shooter game, with the goal to both entertain an raise awareness among players about the importance of sustainability and the impact of climate change. by showing the player a world that has been ravaged by climate change, it makes the player subconsciously aware of the impact of climate change and the importance of sustainability and taking care of our planet. 
