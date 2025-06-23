@@ -259,7 +259,7 @@ function generateProjectLinks(project) {
         links += `
             <a href="${project.github}" target="_blank" 
                class="group inline-flex items-center gap-[2vw] px-[3vw] py-[3vw] bg-accentGold-500 text-black rounded-[1.2vh] text-[3vw] font-medium transition-all duration-300 ease-in-out 
-                      hover:bg-black hover:text-accentGold-500 hover:border hover:border-accentGold-500
+                      hover:bg-black hover:text-accentGold-500 border border-accentGold-500
                       md:gap-[0.4vw] md:px-[1vw] md:py-[0.6vw] md:text-[0.7vw] md:rounded-[0.4vw]">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                class="w-[3.5vw] h-[3.5vw] md:w-[1vw] md:h-[1vw]">

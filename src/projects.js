@@ -85,7 +85,7 @@ I used embeddings and system prompts to create a chatbot awsners the user accord
     },
     {
         id: 4,
-        title: "UE5 Sustainability Demo",
+        title: "UE5 Sustainability-awareness game Demo",
         image: "images/nowaybackportfoliohome.png",
         videoSrc: "videos/ue5sustainability/ue5sustainabilitydemovideocomp.mp4",
         videoPoster: "videos/ue5sustainability/ue5sustainabilityposter.png",
@@ -126,7 +126,7 @@ I used embeddings and system prompts to create a chatbot awsners the user accord
     },
     {
         id: 5,
-        title: "PHP-JS South Park Fan Site",
+        title: "PHP-JS South Park Magazine website",
         image: "images/SouthParkWebsiteportfoliohome.png",
         videoSrc: "videos/project4video.mp4",
         videoPoster: "images/project4poster.jpg",
