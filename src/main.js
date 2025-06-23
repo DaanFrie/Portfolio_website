@@ -1,7 +1,7 @@
 // Mobile Navigation Logic
 import { projects } from "./projects.js"
 
-let isTransitioning = false;
+
 
 const overview = document.getElementById("project-overview")
 const detailView = document.getElementById("project-detail")
@@ -153,20 +153,20 @@ function hideProjectNavButtons() {
 // REFACTORED: Extract HTML template generation to separate function
 function generateProjectDetailHTML(project) {
     // Hero: image or video for project 3
-    const heroMedia = project.id === 1
+    const heroMedia = [1, 4].includes(project.id)
         ? `
-        <div class="mb-[6vw] md:mb-[4vh] fade-in">
-          <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
-            <source src="videos/ue5fpsparkourgame/ue5fpsparkourgamegameplay.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>`
+    <div class="mb-[6vw] md:mb-[4vh] fade-in">
+      <video controls poster="${project.videoPoster}" class="w-full h-auto rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+        <source src="${project.videoSrc}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>`
         : `
-        <div class="mb-[6vw] md:mb-[4vh] fade-in">
-          <div class="relative overflow-hidden rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
-            <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover" />
-          </div>
-        </div>`;
+    <div class="mb-[6vw] md:mb-[4vh] fade-in">
+      <div class="relative overflow-hidden rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">
+        <img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover" />
+      </div>
+    </div>`;
 
     return `
         <div class="min-h-screen bg-black text-white">
