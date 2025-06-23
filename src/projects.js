@@ -99,7 +99,7 @@ I used embeddings and system prompts to create a chatbot awsners the user accord
         The game is mostly focussed on being entertaining and fun to play, while also raising awareness about the importance of sustainability and the impact of climate change. The game will be a mix of action, stealth, and exploration with a focus on environmental storytelling and keeping the player engaged and emotionally invested.
     `,
         technicalDescription: `
-      Built in Unreal Engine 5 with Blueprints. The project is made by me and one of my team members, where we focussed on level and graphics design, setting the scene and atmosphere to create a good sense of what we would be able to create with more time. Since we only had one week to create this demo, i am proud of what we achieved in such a short time.
+      Built in Unreal Engine 5 with Blueprints. The project is made by me and one of my team members, where we focussed on level and graphics design, setting the scene and atmosphere to create a good sense of what we would be able to create with more time. Since we only had 3 days to create this demo, i am proud of what we achieved in such a short time.
       <br>  <br>
       With the trash you collect in game you can recycle items at recycle stations across the maps like bullets etc. The materials used to craft will substract from the amount of trash you have and need to extract, so players have to think carefully if it is worth it to recycle or not.
         <br>  <br>
