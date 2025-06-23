@@ -150,6 +150,8 @@ function hideProjectNavButtons() {
     }, 500);
 }
 
+
+
 // REFACTORED: Extract HTML template generation to separate function
 function generateProjectDetailHTML(project) {
     // Hero: image or video for project 3
@@ -348,6 +350,32 @@ function setupProjectDetailEventListeners(id) {
             disableNavClicks();
             closeDetail();
         };
+    }
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    detailView.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    detailView.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > 50) { // drempel
+            if (swipeDistance < 0) {
+                // Swipe links → next
+                if (nextBtn) nextBtn.click();
+            } else {
+                // Swipe rechts → previous
+                if (prevBtn) prevBtn.click();
+            }
+        }
     }
 }
 
