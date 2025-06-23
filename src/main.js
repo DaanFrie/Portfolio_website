@@ -153,7 +153,7 @@ function hideProjectNavButtons() {
 // REFACTORED: Extract HTML template generation to separate function
 function generateProjectDetailHTML(project) {
     // Hero: image or video for project 3
-    const heroMedia = project.id === 3
+    const heroMedia = project.id === 1
         ? `
         <div class="mb-[6vw] md:mb-[4vh] fade-in">
           <video controls poster="images/showcase/FPSparkour/fpsparcourgame1.png" class="w-full h-auto rounded-[2vh] md:rounded-[2vh] shadow-lg max-w-[80vw] mx-auto md:max-w-[40vw]">

@@ -2,30 +2,30 @@
 export const projects = [
     {
         id: 1,
-        title: "Laravel Vacancy Website",
-        image: "images/OpenHiring2portfolio.jpg",
+        title: "UE5 FPS Parkour Game",
+        image: "images/ue5fpsparcourgamehome.png",
         description: `
-      This Laravel application provides a complete solution for anonymously posting and managing job vacancies. 
-      Users can easily create profiles, post openings, and apply without revealing personal information. 
-      The admin dashboard offers detailed statistics, moderation tools, advanced search functionality, 
-      and role-based access control.
+      A first person sniper rifle parkour game developed in Unreal Engine 5. Players run, jump, snipe and use advanced gameplay mechanics like air-dashes and wall-runs to navigate through challenging levels. By sniping and killing an enemy you gain a dash, which you can use to make difficult jumps. the game will get progressively harder and will require you to snipe multiple enemies mid-air to complete the level.
+       <br>  <br> 
+       The game will feature a timer and leaderboard system to encourage speedrunners to compete for the best times. The game is focused on very challenging fast-paced gameplay that feels satisfying and rewarding. Part of the fun is having to grind for hours to make it through the later levels while being easy to pick up and play for beginners.
+
+       
     `,
         technicalDescription: `
-      Built with Laravel 9, using Eloquent ORM for MySQL database interactions. 
-      Authentication and authorization handled via Laravel Sanctum. 
-      Real-time dashboard updates powered by Livewire. 
-      Front-end styled entirely in Tailwind CSS. 
-      Unit and feature tests implemented using PHPUnit.
+       I built this game in unreal engine 5 using blueprints. I also did de animating of de character en de level design. Working on this game i mainly focussed on the mechanics and gameplay, so i am sure i have a stable foundation to build on. i spent a lot of time perfecting the dash mechanic and the sniping mechanics to make them feel satisfying and rewarding. I also spent a lot of time designing levels to find out what is fun and what isn't, intentionally leaving out the graphics and visuals for now.
+       <br>  <br> 
+       The game is still in development and I will be focussing on de graphics and visuals of de game since I haven't worked on that yet. I will also be adding more levels and more advanced gameplay mechanics to give it more depth and replayability.
     `,
-        tags: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Figma", "Git"],
-        github: "https://github.com/GinusHR/TLE-Agency-Team6",
+        tags: ["Unreal Engine 5", "Blueprints", "C++", "Level Design"],
+        github: "#",
         live: "#",
         showcaseImages: [
-            "images/showcase1-1.jpg",
-            "images/showcase1-2.jpg",
-            "images/showcase1-3.jpg"
+            "images/showcase/FPSparkour/fpsparcourgame1.png",
+            "images/showcase/FPSparkour/fpsparcourgame2.png",
+            "images/showcase/FPSparkour/fpsparcourgame3.png",
         ]
     },
+
     {
         id: 2,
         title: "AI Geoguessr Assistant",
@@ -52,27 +52,25 @@ export const projects = [
     },
     {
         id: 3,
-        title: "UE5 FPS Parkour Game",
-        image: "images/ue5fpsparcourgamehome.png",
+        title: "Laravel Vacancy Website",
+        image: "images/OpenHiring2portfolio.jpg",
         description: `
-      A first person sniper rifle parkour game developed in Unreal Engine 5. Players run, jump, snipe and use advanced gameplay mechanics like air-dashes and wall-runs to navigate through challenging levels. By sniping and killing an enemy you gain a dash, which you can use to make difficult jumps. the game will get progressively harder and will require you to snipe multiple enemies mid-air to complete the level.
-       <br>  <br> 
-       The game will feature a timer and leaderboard system to encourage speedrunners to compete for the best times. The game is focused on very challenging fast-paced gameplay that feels satisfying and rewarding. Part of the fun is having to grind for hours to make it through the later levels while being easy to pick up and play for beginners.
 
-       
+              A full-stack web application for an anonymous hiring agency, made with laravel. It features a dashboard for companies to manage job vacancies, a dashboard for users to apply for jobs, and a dashboard for admins to manage the entire platform. This was a group project where I was mostly responsible for the front end of the application. The company already had a design in mind, which I implemented using Tailwind CSS.
+        
+        
     `,
         technicalDescription: `
-       I built this game in unreal engine 5 using blueprints. I also did de animating of de character en de level design. Working on this game i mainly focussed on the mechanics and gameplay, so i am sure i have a stable foundation to build on. i spent a lot of time perfecting the dash mechanic and the sniping mechanics to make them feel satisfying and rewarding. I also spent a lot of time designing levels to find out what is fun and what isn't, intentionally leaving out the graphics and visuals for now.
-       <br>  <br> 
-       The game is still in development and I will be focussing on de graphics and visuals of de game since I haven't worked on that yet. I will also be adding more levels and more advanced gameplay mechanics to give it more depth and replayability.
+      Built with Laravel 9, using Eloquent ORM for MySQL database interactions. 
+        Frontend developed with Tailwind CSS for responsive design and Figma for UI/UX. The application is both for desktop and mobile.
     `,
-        tags: ["Unreal Engine 5", "Blueprints", "C++", "Level Design"],
-        github: "#",
+        tags: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Figma", "Git"],
+        github: "https://github.com/GinusHR/TLE-Agency-Team6",
         live: "#",
         showcaseImages: [
-            "images/showcase/FPSparkour/fpsparcourgame1.png",
-            "images/showcase/FPSparkour/fpsparcourgame2.png",
-            "images/showcase/FPSparkour/fpsparcourgame3.png",
+            "images/showcase1-1.jpg",
+            "images/showcase1-2.jpg",
+            "images/showcase1-3.jpg"
         ]
     },
     {
