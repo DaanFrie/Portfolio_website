@@ -140,7 +140,7 @@ A PHP, HTML, and JavaScript-based South Park magazine website where you can view
         github: "https://github.com/DaanFrie/SouthParkMagazine",
         live: "#",
         showcaseImages: [
-            "images/showcase/southpark/southpark1.png",
+            "images/showcase/southpark/southpark11.png",
             "images/showcase/southpark/southpark2.png",
             "images/showcase/southpark/southpark3.png",
         ]
