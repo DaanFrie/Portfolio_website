@@ -89,20 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(el)
     })
 
-    // Console Log for Development
-    console.log(`
-    ⚫✨ Portfolio Loaded Successfully! ⚫✨
-    
-    🖤 Simple & Working:
-    • Pure black backgrounds
-    • Simple fade-in animations (once only)
-    • No complex stagger effects
-    • No complex stagger effects
-    • No bidirectional animations
-    • Clean and stable
-    
-    📧 Contact: daan.developer@email.com
-  `)
+
 })
 
 // Custom Scroll Indicator
