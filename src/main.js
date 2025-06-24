@@ -226,7 +226,7 @@ function generateProjectDetailHTML(project) {
                     ${project.showcaseImages ? `
                     <div class="fade-in mb-[6vw]">
                         <h3 class="text-[5vw] font-bold text-accentGold-500 mb-[4vw] md:text-[1.5vw] md:mb-[2vh]">Showcase</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-[4vw] md:gap-[2vw]">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-[6vw] md:gap-[2.5vw]">
                             ${project.showcaseImages.map(src => `
                                 <div class="overflow-hidden rounded-[2vh] md:rounded-[2vh] shadow-lg">
                                     <img src="${src}" alt="Showcase image" class="w-full h-auto object-cover" />
