@@ -27,7 +27,17 @@ html,
 body {
     overflow-x: hidden;
     background-color: #000000; /* Ensure black background everywhere */
+
+    touch-action: pan-y; /* Alleen verticaal scrollen toestaan */
+    overscroll-behavior-x: none; /* Geen swipe-navigatie of terug-bewegingen op X-as */
 }
+
+#project-detail {
+    overflow-x: hidden;
+    touch-action: pan-y;
+    overscroll-behavior-x: none;
+}
+
 
 /* Verberg standaard scrollbar - OVERAL */
 html,

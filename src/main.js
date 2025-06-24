@@ -353,30 +353,32 @@ function setupProjectDetailEventListeners(id) {
     }
 
     let touchStartX = 0;
-    let touchEndX = 0;
+    let touchStartY = 0;
 
-    detailView.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    });
+    document.addEventListener("touchstart", function (e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
 
-    detailView.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    });
+    document.addEventListener("touchend", function (e) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
 
-    function handleSwipe() {
-        const swipeDistance = touchEndX - touchStartX;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
 
-        if (Math.abs(swipeDistance) > 50) { // drempel
-            if (swipeDistance < 0) {
-                // Swipe links → next
-                if (nextBtn) nextBtn.click();
+        // Alleen horizontale swipe als horizontale afstand groter is dan verticale
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+            if (diffX < 0) {
+                // Swipe naar links → volgende project
+                nextBtn?.click();
             } else {
-                // Swipe rechts → previous
-                if (prevBtn) prevBtn.click();
+                // Swipe naar rechts → vorige project
+                prevBtn?.click();
             }
         }
-    }
+    }, { passive: true });
+
 }
 
 
