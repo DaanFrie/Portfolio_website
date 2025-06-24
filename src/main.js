@@ -344,12 +344,20 @@ function setupProjectDetailEventListeners(id) {
         };
     }
 
-    // BACK TO HOMEPAGE
+// BACK TO HOMEPAGE
     if (backBtn) {
         backBtn.onclick = () => {
             disableNavClicks();
             closeDetail();
+
+            // Scroll naar projectsectie na korte vertraging
+            setTimeout(() => {
+                const projectSection = document.querySelector("#projects"); // pas selector aan indien anders
+                projectSection?.scrollIntoView({ behavior: "smooth" });
+            }, 300); // wacht tot de animatie klaar is
         };
+
+
     }
 
     let touchStartX = 0;
