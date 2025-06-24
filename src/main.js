@@ -369,23 +369,25 @@ function setupProjectDetailEventListeners(id) {
     }, { passive: true });
 
     document.addEventListener("touchend", function (e) {
+        const detailIsOpen = detailView.classList.contains("open"); // of andere check
+
+        if (!detailIsOpen) return; // swipe negeren als detail niet zichtbaar is
+
         const touchEndX = e.changedTouches[0].clientX;
         const touchEndY = e.changedTouches[0].clientY;
 
         const diffX = touchEndX - touchStartX;
         const diffY = touchEndY - touchStartY;
 
-        // Alleen horizontale swipe als horizontale afstand groter is dan verticale
         if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
             if (diffX < 0) {
-                // Swipe naar links → volgende project
                 nextBtn?.click();
             } else {
-                // Swipe naar rechts → vorige project
                 prevBtn?.click();
             }
         }
     }, { passive: true });
+
 
 }
 
@@ -421,6 +423,8 @@ function showDetail(id) {
         }, 50)
 
         document.body.classList.add("overflow-hidden")
+        detailView.classList.add("open");
+
 
         // Setup event listeners
         setupProjectDetailEventListeners(id);
@@ -456,6 +460,8 @@ function showDetailFromDirection(id, direction) {
     detailView.style.transition = "transform 0.6s ease-in-out";
     detailView.classList.remove("hidden");
     detailView.classList.add("block");
+    detailView.classList.add("open");
+
 
     // 3) Slide in
     setTimeout(() => {
@@ -501,6 +507,9 @@ function closeDetail() {
     // Slide detail view out to the RIGHT
     detailView.style.transform = "translateX(100vw)"
     detailView.style.transition = "transform 0.6s ease-in-out"
+    detailView.classList.remove("open");
+
+
 
     // Slide homepage back in from the LEFT
     setTimeout(() => {
