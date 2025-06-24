@@ -450,6 +450,8 @@ function showDetailFromDirection(id, direction) {
     const project = projects.find((p) => p.id === id);
     if (!project) return;
 
+    detailView.scrollTop = 0;
+
     // 1) Inject the new project detail HTML
     detailContent.innerHTML = generateProjectDetailHTML(project);
 
